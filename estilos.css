@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900');
+:root{
+    --violeta:#6536ca;
+    --darkblue: #212d50;
+    --gris: #6c757d;
+    --lightgris: #eeeeee;
+    --mediumgris: #949494;
+    --naranja: #faa76c;
+    --lightnaranja: #fccaa7;
+    --blanco: #ffffff;
+    --h1: 2em;
+}
+*{
+    padding: 0; margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+    color: var(--darkblue);
+}
+a{
+    text-decoration: none;
+    color: var(--darkblue);
+}
+li{
+    list-style-type: none;
+}
+h1{
+    font-size: 3em;
+    font-weight: 900;
+}
+h2{
+    font-size: 2.6em;
+}
+h3{
+    font-size: 1.75em;
+}
+h4{
+    font-size: 1.25em;
+    font-weight: 400;
+    padding-bottom: 2%;
+    letter-spacing: 0.05em;
+}
+
+
+/* GENERAL ENDS HERE */
+
+
+.header, .right, .left, .main{
+    margin-bottom: 1%;
+}
+
+.header{
+    /* height: 90px; */
+    width: 100vw;
+    z-index: 1000;
+    background-color: var(--blanco);
+    position: fixed;
+    padding-top: 1%;
+    padding-bottom: 6%;
+}
+.logo{
+    position: absolute;
+    left: 5.5vw;
+    top: 15px;
+}
+.logo img{
+    height: 50px;
+}
+.lang{
+    position: absolute;
+    right: 4.5vw;
+    top: 45px;
+}
+.lang li{
+    display: inline;
+    padding: 0 5px;
+}
+.lang li:nth-child(1){
+    font-weight: 700;
+    border-right: 1px solid var(--darkblue);
+}
+.lang a{
+    text-decoration: none;
+}
+
+/* HEADER ENDS HERE */
+
+.footer{
+    background-color: var(--blanco);
+    text-align: center;
+    z-index: 900;
+    position: sticky;
+    height: 60px;
+    width: 100vw;
+    bottom: 0;
+    padding-top:15px; 
+    display: none;
+}
+.footer a{
+    font-weight: 700;
+
+}
+
+/* BOTTOM ENDS HERE */
+
+.left{
+    position: fixed;
+    height: 100vh;
+    width: 5%;
+    left: 0;
+    background-color: var(--blanco);
+    z-index: 900;
+
+}
+.left div{
+    transform: rotate(-90deg);
+    font-weight: 700;
+    position: fixed;
+    top: 50vh;
+}
+
+/* LEFT ENDS HERE */
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    top: 100px;
+    position: relative;
+}
+.index-hero{
+    background-color: var(--lightgris);
+    padding: 16.5% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.index-hero-welcome h2{
+    /* font-size: 2.6em; */
+    font-weight: 700;
+}
+.index-hero-welcome span{
+    color: var(--violeta);
+}
+.index-hero-welcome hr{
+    width: 80vw;
+    background: var(--mediumgris);
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+    height: 1px;
+    border: none;
+}
+.hero-graphic-top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12%;
+}
+.hero-graphic-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 18%;
+}
+.index-skills{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10%;
+}
+.index-skills-phrase{
+    width: 35%;
+    padding: 10% 5.5%;
+    display: flex;    
+    align-items: center;
+}
+.index-skills-list{
+    width: 70%;
+    background-color: var(--naranja);
+    padding-left: 5.5%;
+    display: flex;    
+    align-items: center;
+}
+.index-skills-list li{
+    padding-bottom: 10%;
+}
+.index-skills-list li:last-child{
+    padding-bottom: 0;
+}
+.index-skills-list .number{
+    font-size: 1em;
+}
+.index-skills-list .skill{
+    /* font-size: 1.75em; */
+    font-weight: 700;
+    display: inline;
+}
+
+
+.index-recent{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 8%;
+}
+.index-recent-title{
+    margin-bottom: 5%;
+}
+
+.index-recent-grid{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: space-between;
+}
+.grid-big{
+    width: 48%;
+}
+.grid-big img{
+    width: 100%;
+}
+.grid-small{
+    width: 48%;
+}
+.grid-small img{
+    width: 100%;
+}
+.grid-small-1{
+    margin-bottom: 8.5%;
+}
+.view-more{
+    border: none;
+    border-bottom: 1px solid var(--violeta);
+    padding: 1% 1.5%;
+}
+.view-more a{
+    color: var(--violeta);
+    font-size: 1.75em;
+    font-weight: 700;
+}
+.view-more i{
+    color: var(--violeta);
+}
+
+
+footer{
+    position: sticky;
+    text-align: center;
+}
+.footer-title{
+    margin-bottom: 5%;
+    /* font-size: var(--h1); */
+}
+.footer-contact{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+
+}
+.footer-contact ul{
+    display: flex;
+    border: 1px solid var(--mediumgris);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-contact li{
+    padding: 2% 5%;
+    font-size: 1em;
+    border-right: 1px solid var(--mediumgris);
+    flex-grow: 1;
+}
+.footer-contact li:last-child{
+    border-right: 0;
+}
+.footer-contact a, i{
+    color: var(--violeta);
+    font-weight: 700;
+}
+.footer-legal{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    align-items: baseline;
+}
+.footer-legal p{
+    font-size: 0.8em;
+    color: var(--mediumgris);
+}
+.footer-legal p:first-child{
+    font-size: 1em;
+    font-weight: 700;
+}
+.footer-legal a, .fa-arrow-up{
+    color: var(--mediumgris);
+    font-size: 1em;
+    font-weight: 700;
+}
+.footer-svg{
+    /* width: 100vw;
+    height: 5vh;
+    background: var(--naranja); */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* MAIN ENDS HERE */
+
+.right{
+    position: fixed;
+    height: 100vh;
+    width: 5%;
+    right: 0;
+    background-color: var(--blanco);
+    z-index: 900;
+
+
+}
+.right div{
+    transform: rotate(90deg);
+    font-weight: 700;
+    top: 50%;
+    position: fixed;
+    top: 50vh;
+
+}
+
+/* RIGHT ENDS HERE */
+
+
+
+
+
+/* CONTACT STARTS HERE */
+.contact-hero{
+    width: 100%;
+    background-color: var(--lightnaranja);
+    padding: 7% 0 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.contact-hero-form{
+    width: 60%;
+}
+.contact-hero-form input{
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: var(--gris)
+}
+.contact-hero-form select{
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: var(--gris)
+}
+.contact-form-text{
+    margin-bottom: 8%;
+}
+.contact-hero-form h1{
+    margin-bottom: 5%;
+}
+.contact-hero-form p{
+    font-size: 1.25em;
+    line-height: 1.5em;
+    padding-bottom: 2%;
+}
+.contact-form-footer{
+    width: 100%;
+    display: flex;
+    border: 1px solid var(--mediumgris);
+    padding: 4% 10%;
+}
+
