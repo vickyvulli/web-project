@@ -8,7 +8,7 @@
     --naranja: #faa76c;
     --lightnaranja: #fccaa7;
     --blanco: #ffffff;
-    --h1: 2em;
+    --celeste: #a5cafa;
 }
 *{
     padding: 0; margin: 0;
@@ -41,7 +41,11 @@ h4{
 }
 
 
-/* GENERAL ENDS HERE */
+/* 
+    -------------------
+    HEADER STARTS HERE 
+    -------------------
+*/
 
 
 .header, .right, .left, .main{
@@ -49,13 +53,11 @@ h4{
 }
 
 .header{
-    /* height: 90px; */
+    height: 90px;
     width: 100vw;
     z-index: 1000;
     background-color: var(--blanco);
     position: fixed;
-    padding-top: 1%;
-    padding-bottom: 6%;
 }
 .logo{
     position: absolute;
@@ -82,7 +84,11 @@ h4{
     text-decoration: none;
 }
 
-/* HEADER ENDS HERE */
+/* 
+    -------------------
+    BOTTOM STARTS HERE 
+    -------------------
+*/
 
 .footer{
     background-color: var(--blanco);
@@ -99,8 +105,11 @@ h4{
     font-weight: 700;
 
 }
-
-/* BOTTOM ENDS HERE */
+/* 
+    -------------------
+    LEFT STARTS HERE 
+    -------------------
+*/
 
 .left{
     position: fixed;
@@ -117,8 +126,15 @@ h4{
     position: fixed;
     top: 50vh;
 }
+.left div a:hover{
+    color: var(--violeta);
+}
 
-/* LEFT ENDS HERE */
+/* 
+    ----------------------
+    MAIN index STARTS HERE 
+    ----------------------
+*/
 
 main{
     width: 90%;
@@ -203,6 +219,7 @@ main{
     display: block;
     text-align: center;
     margin-bottom: 8%;
+    height: auto;
 }
 .index-recent-title{
     margin-bottom: 5%;
@@ -217,36 +234,102 @@ main{
 }
 .grid-big{
     width: 48%;
+    position: relative;
+    height: 635px;
 }
 .grid-big img{
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.grid-big-info{
+    z-index: 900;
+    width: 100%;
+    text-align: center;
+    background-color: yellow;
+    padding: 5% 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: inline-grid;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.grid-info-center{
+    align-self: center;
+}
+.info-tematica{
+    font-weight: 700;
+    align-self: flex-end;
+}
+.grid-big-info:hover{
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+.grid-small-container{
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .grid-small{
-    width: 48%;
+    position: relative;
+    height: 291px;
+    width: 100%;
 }
 .grid-small img{
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.grid-small-1{
-    margin-bottom: 8.5%;
+.grid-small-info{
+    z-index: 900;
+    width: 100%;
+    background-color: yellow;
+    padding: 5% 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: inline-grid;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.grid-small-info:hover{
+    opacity: 1;
+    transition: opacity 1.5s;
 }
 .view-more{
     border: none;
     border-bottom: 1px solid var(--violeta);
     padding: 1% 1.5%;
+    margin: 0 auto;
+}
+.view-more:hover{
+    background-color: var(--violeta);
+    transition: all .15s;
 }
 .view-more a{
     color: var(--violeta);
     font-size: 1.75em;
     font-weight: 700;
 }
-.view-more i{
+.view-more .fa-arrow-down{
     color: var(--violeta);
+}
+.view-more a:hover, .view-more .fa-arrow-down:hover{
+    color: var(--blanco);
+    /* transition: all .15s; */
+    
 }
 
 
 footer{
-    position: sticky;
+    /* position: sticky; */
     text-align: center;
 }
 .footer-title{
@@ -300,16 +383,23 @@ footer{
     font-size: 1em;
     font-weight: 700;
 }
-.footer-svg{
-    /* width: 100vw;
+.footer-contact-links a:hover, .footer-contact-links i:hover{
+    color: var(--darkblue);
+}
+/* .footer-svg{
+    width: 100vw;
     height: 5vh;
-    background: var(--naranja); */
+    background: var(--naranja);
     position: relative;
     bottom: 0;
     left: 0;
     z-index: 1000;
-}
-/* MAIN ENDS HERE */
+} */
+/* 
+    ----------------------
+    RIGHT STARTS HERE 
+    ----------------------
+*/
 
 .right{
     position: fixed;
@@ -329,14 +419,18 @@ footer{
     top: 50vh;
 
 }
-
-/* RIGHT ENDS HERE */
-
-
-
+.right div a:hover{
+    color: var(--violeta);
+}
 
 
-/* CONTACT STARTS HERE */
+
+
+/* 
+    ------------------------
+    MAIN contact STARTS HERE 
+    ------------------------
+*/
 .contact-hero{
     width: 100%;
     background-color: var(--lightnaranja);
@@ -354,13 +448,14 @@ footer{
     border: none;
     background: none;
     font-size: 1em;
-    color: var(--gris)
+    color: var(--violeta);
+
 }
-.contact-hero-form select{
+.contact-form-select{
     border: none;
     background: none;
     font-size: 1em;
-    color: var(--gris)
+    color: var(--violeta)
 }
 .contact-form-text{
     margin-bottom: 8%;
@@ -368,7 +463,7 @@ footer{
 .contact-hero-form h1{
     margin-bottom: 5%;
 }
-.contact-hero-form p{
+.contact-hero-form {
     font-size: 1.25em;
     line-height: 1.5em;
     padding-bottom: 2%;
@@ -376,7 +471,83 @@ footer{
 .contact-form-footer{
     width: 100%;
     display: flex;
-    border: 1px solid var(--mediumgris);
+    border: 1px solid var(--gris);
     padding: 4% 10%;
 }
+.contact-form-text > div{
+    border-bottom: 1px solid var(--darkblue);
+}
 
+
+
+
+/* 
+    ------------------------
+    MAIN project STARTS HERE 
+    ------------------------
+*/
+.project-hero{
+    background-color: var(--celeste);
+    padding: 14% 0 16.5% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.project-hero-title{
+    width: 100%;
+    position: relative;
+    margin-bottom: 3%;
+
+}
+.project-hero-title h1{
+    margin-bottom: 2%;
+}
+.project-hero-title hr{
+    width: 90%;
+    background: var(--mediumgris);
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    height: 1px;
+    border: none;
+}
+.project-hero-menu{
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.project-hero-menu li:nth-child(1) a{
+    font-weight: 700;
+    color: var(--violeta);
+}
+.project-hero-menu li:nth-child(1) a sup{
+    font-weight: 400;
+    color: var(--violeta);
+}
+.project-container-grid{
+    width: 90%;
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 8%;
+}
+.grid-medium{
+    width: 30%;
+    position: relative;
+    height: 397px;
+    margin-bottom: 5%;
+}
+.grid-medium img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

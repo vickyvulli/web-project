@@ -4,7 +4,10 @@
     <head>
         <meta charset="utf-8">
         <title>Victoria Vullioud</title>
+        <link rel="stylesheet" href="contacto.css">
         <link rel="stylesheet" href="estilos.css">
+
+
         <link href="imgs/favicon.png" rel="shortcut icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
@@ -12,7 +15,7 @@
     <body>
         <div class="header">
             <a href="index.html" class="logo">
-                <img src="imgs/vvlogo.png" alt="Victoria Vullioud">
+                <img src="imgs/vvlogo-05-op.svg" alt="Victoria Vullioud">
             </a>
             <ul class="lang">
                 <li>
@@ -25,7 +28,7 @@
         </div> <!-- .header -->
         <div class="left">
             <div>
-                <a href="">Proyectos</a>
+                <a href="proyectos.html">Proyectos</a>
             </div>
         </div>  <!-- .left -->
 
@@ -35,24 +38,71 @@
                     <form action="">
                         <div class="contact-form-text">
                             <h1>¡Hola Vicky!</h1>
-                            <p>Te estoy contactando de parte de <input placeholder="(empresa/organización)" required>, me interesaría poder hablar con vos sobre un proyecto de 
-                                <select name="área de trabajo" required>
-                                    <option value="editorial">editorial</option>
-                                    <option value="ilustraion">ilustración</option>
-                                    <option value="branding">branding</option>
-                                    <option value="web">diseño web</option>
-                                </select>        
-                            .</p>
-                            <p>Quisiera arreglar una 
-                                <select name="forma de contacto" required>
+                            <!-- <p>-->
+                                Te estoy contactando de parte de <input placeholder="empresa/organización" required>, me interesaría poder hablar con vos sobre un proyecto de  
+                                <div class="cs-select cs-skin-rotate">
+                                    <div class="cs-options">
+                                        <ul>
+                                            <li data-option data-value="editorial"><span>editorial</span></li>
+                                            <li data-option data-value="ilustration"><span>ilustración</span></li>
+                                            <li data-option data-value="branding"><span>branding</span></li>
+                                            <li data-option data-value="web"><span>diseño web</span></li>
+
+                                        </ul>
+                                    </div> <!-- cs-options -->
+                                    <select class="cs-select cs-skin-rotate" name="área de trabajo" required>
+                                        <option value="editorial">editorial</option>
+                                        <option value="ilustration">ilustracion</option>
+                                        <option value="branding">branding</option>
+                                        <option value="web">diseño web</option>
+
+                                    </select>
+                                </div>
+       
+                            .
+                        <!-- </p> -->
+                            <!-- <p> -->
+                            <br>
+                            Quisiera arreglar una 
+                                <div class="cs-select cs-skin-rotate">
+                                    <div class="cs-options">
+                                        <ul>
+                                            <li data-option data-value="llamada"><span>llamada</span></li>
+                                            <li data-option data-value="email"><span>e-mail</span></li>
+                                            <li data-option data-value="reunion"><span>reunión</span></li>
+                                        </ul>
+                                    </div> <!-- contact-form-options -->
+                                <select class="cs-select cs-skin-rotate" name="forma de contacto" required>
                                     <option value="llamada">videollamada</option>
                                     <option value="email">e-mail</option>
                                     <option value="reunion">reunión</option>
-                                </select>  
+                                </select>
+                                </div>
                                 con vos para charlar sobre el mismo.
-                            </p>
-                            <p>Saludos,<br><input placeholder="nombre" required>.</p>
+                                <br>
+                            <!-- </p> -->
+                            <!-- <p> -->
+                                Saludos,<br><input placeholder="nombre" required>.
+                            <!-- </p> -->
                         </div> <!-- contact-form-text -->
+
+
+
+                    <!-- <div class="cs-select cs-skin-rotate">
+                        <div class="cs-options">
+                            <ul>
+                                <li data-option data-value="1" class="cs-selected"><span>Option 1</span></li>
+                                <li data-option data-value="2"><span>Option 2</span></li>
+                                <li data-option data-value="3"><span>Option 3</span></li>
+                            </ul>
+                        </div>
+                        <select class="cs-select cs-skin-rotate">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div> -->
+
 
                         <div class="contact-form-footer">
                             <div class="contact-footer-mail">
@@ -72,10 +122,18 @@
 
         <div class="right">
                 <div>
-                    <a href="">Sobre mi</a>
+                    <a href="perfil.html">Sobre mi</a>
                 </div>
         </div>  <!-- .right -->
-
+<script src="js/classie.js"></script>
+<script src="js/selectFx.js"></script>
+<script>
+    (function() {
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+            new SelectFx(el);
+        } );
+    })();
+</script>
     </body>
 
 </html>
