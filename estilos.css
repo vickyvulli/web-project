@@ -239,7 +239,6 @@ main{
 }
 .grid-big img{
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
 }
@@ -247,7 +246,6 @@ main{
     z-index: 900;
     width: 100%;
     text-align: center;
-    background-color: yellow;
     padding: 5% 0;
     position: absolute;
     left: 0;
@@ -256,6 +254,9 @@ main{
     display: inline-grid;
     opacity: 0;
     transition: opacity .5s;
+}
+.werk{
+    background-color: #c01cea;
 }
 .grid-info-center{
     align-self: center;
@@ -282,7 +283,6 @@ main{
 }
 .grid-small img{
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
 }
@@ -299,9 +299,18 @@ main{
     opacity: 0;
     transition: opacity .5s;
 }
+.siluetas{
+    background-color: #41a2b6;
+}
+.fasiculos{
+    background-color: #003984;
+}
 .grid-small-info:hover{
     opacity: 1;
     transition: opacity 1.5s;
+}
+.info-blanca{
+    color: var(--blanco);
 }
 .view-more{
     border: none;
@@ -346,14 +355,18 @@ footer{
     display: flex;
     border: 1px solid var(--mediumgris);
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
 }
-.footer-contact li{
-    padding: 2% 5%;
+.footer-contact-elements{
+    padding: 2% 4%;
     font-size: 1em;
     border-right: 1px solid var(--mediumgris);
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-contact-email{
+    display: block;
 }
 .footer-contact li:last-child{
     border-right: 0;
@@ -488,7 +501,7 @@ footer{
 */
 .project-hero{
     background-color: var(--celeste);
-    padding: 14% 0 16.5% 0;
+    padding: 14% 0 18.5% 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -532,9 +545,8 @@ footer{
 .project-container-grid{
     width: 90%;
     display: flex;
-    position: absolute;
-    top: 55%;
-    left: 5%;
+    transform: translateY(-100px);
+    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 8%;
@@ -547,7 +559,6 @@ footer{
 }
 .grid-medium img{
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
 }
