@@ -119,15 +119,17 @@ h4{
     left: 0;
     background-color: var(--blanco);
     z-index: 900;
-
+    writing-mode: vertical-lr;
+    align-items: center;
+    display: flex;
 }
-.left div{
-    transform: rotate(-90deg);
+.left a{
     font-weight: 700;
-    position: fixed;
     top: 50vh;
+    transform: rotate(180deg);
+    position: relative;
 }
-.left div a:hover{
+.left a:hover{
     color: var(--violeta);
 }
 
@@ -236,7 +238,6 @@ main{
 .grid-big{
     width: 48%;
     position: relative;
-    height: 635px;
 }
 .grid-big img{
     width: 100%;
@@ -265,6 +266,7 @@ main{
 .info-tematica{
     font-weight: 700;
     align-self: flex-end;
+    color: var(--blanco);
 }
 .grid-big-info:hover{
     opacity: 1;
@@ -279,7 +281,6 @@ main{
 }
 .grid-small{
     position: relative;
-    height: 291px;
     width: 100%;
 }
 .grid-small img{
@@ -397,7 +398,7 @@ footer{
     font-size: 1em;
     font-weight: 700;
 }
-.footer-contact-links a:hover, .footer-contact-links i:hover{
+.footer-contact-links a:hover, .footer-contact-links i:hover, .footer-contact-email a:hover{
     color: var(--darkblue);
 }
 /* .footer-svg{
@@ -422,18 +423,16 @@ footer{
     right: 0;
     background-color: var(--blanco);
     z-index: 900;
-
-
+    writing-mode: vertical-lr;
+    align-items: center;
+    display: flex;
 }
-.right div{
-    transform: rotate(90deg);
+.right a{
     font-weight: 700;
-    top: 50%;
-    position: fixed;
     top: 50vh;
-
+    position: relative;
 }
-.right div a:hover{
+.right a:hover{
     color: var(--violeta);
 }
 
@@ -543,6 +542,18 @@ footer{
     font-weight: 400;
     color: var(--violeta);
 }
+.project-hero-graphic-top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+}
+.project-hero-graphic-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+}
 .project-container-grid{
     width: 90%;
     display: flex;
@@ -550,16 +561,24 @@ footer{
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 8%;
+    /* margin-bottom: 8%; */
 }
 .grid-medium{
     width: 30%;
     position: relative;
-    height: 397px;
     margin-bottom: 5%;
 }
 .grid-medium img{
     width: 100%;
     top: 0;
     left: 0;
+}
+.diversidad{
+    background-color: #a984b7;
+}
+.inversion{
+    background-color: #888888;
+}
+.cartografia{
+    background-color: #e56061;
 }
