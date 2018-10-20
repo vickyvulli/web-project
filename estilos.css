@@ -320,7 +320,6 @@ main{
     color: var(--blanco);
 }
 .view-more{
-    border: none;
     /* border-bottom: 1px solid var(--violeta); */
     /* padding: 1% 1.5%; */
     margin: 0 auto;
@@ -328,19 +327,19 @@ main{
     position: relative;
 }
 .view-more a{
-    padding: 10% 10% 6% 12%;
+    padding: 1.5% 2%;
     border-bottom: 1px solid var(--violeta);
     text-align: left;
     color: var(--violeta);
     font-size: 1.75em;
     font-weight: 700;
-    padding-right: 35%;
+    padding-right: 6%;
 }
 .view-more a::before{
     content: "";
     background-image: url(imgs/svg/001-blink-op.svg);
     position: absolute;
-    right: 6%;
+    right: 27%;
     width: 20%;
     height: 100%;
     background-repeat: no-repeat;
@@ -353,8 +352,8 @@ main{
     transition: background-color .15s;
     background-image: url(imgs/svg/004-eye-op.svg);
     background-repeat: no-repeat;
-    background-position: 89% 61%;
-    background-size: 17%;
+    background-position: 83% 50%;
+    background-size: 16%;
     z-index: 1;
 }
 
