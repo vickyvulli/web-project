@@ -129,51 +129,61 @@
 
                 </section> <!-- .index-recent -->
 
-                <footer>
-                    <div class="footer-title">
-                        <h3>¡Me interesan escuchar nuevas propuestas,<br>así que no seas timido y escribime!</h3>
-                    </div>
-                    <div class="footer-contact">
-                        <ul>
-                            <li class="footer-contact-elements footer-contact-links">
-                                <a href="contacto.html">¡Contactame!</a>
-                            </li>
-                            <li class="footer-contact-elements">Buenos Aires,<br>Argentina</li>
-                            <li class="footer-contact-elements footer-contact-email">+54 11 4563 4831<br>
-                                <a href="">vv.works@gmail.com</a>
-                            </li>
-                            <li class="footer-contact-elements footer-contact-links">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li class="footer-contact-elements footer-contact-links">
-                                <a href="https://www.behance.net/VictoriaVullioud" target="blank"><i class="fab fa-behance"></i></a>
-                            </li>
-                            <li class="footer-contact-elements footer-contact-links">
-                                <a href="https://linkedin.com/in/victoria-vullioud/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-legal">
-                        <p>Victoria Vullioud</p>
-                        <p>© 2018 Diseño y programación por Victoria Vullioud</p>
-                        <a href="">Volver arriba <i class="fas fa-arrow-up"></i></a>
-                    </div>
-                </footer>
             </main>
+
+            <footer>
+                <div class="footer-title">
+                    <h3>¡Me interesan escuchar nuevas propuestas,<br>así que no seas timido y escribime!</h3>
+                </div>
+                <div class="footer-contact">
+                    <ul>
+                        <li class="footer-contact-elements footer-contact-links">
+                            <a href="contacto.html">¡Contactame!</a>
+                        </li>
+                        <li class="footer-contact-elements">Buenos Aires,<br>Argentina</li>
+                        <li class="footer-contact-elements footer-contact-email">+54 11 4563 4831<br>
+                            <a href="">vv.works@gmail.com</a>
+                        </li>
+                        <li class="footer-contact-elements footer-contact-links">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="footer-contact-elements footer-contact-links">
+                            <a href="https://www.behance.net/VictoriaVullioud" target="blank"><i class="fab fa-behance"></i></a>
+                        </li>
+                        <li class="footer-contact-elements footer-contact-links">
+                            <a href="https://linkedin.com/in/victoria-vullioud/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <p>Victoria Vullioud</p>
+                    <p>© 2018 Diseño y programación por Victoria Vullioud</p>
+                    <a href="">Volver arriba <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </footer>
 
             <div class="right">
                 <a href="perfil.html">Sobre mi</a>
             </div>  <!-- .right -->
 
-            <div class="footer">
+            <div class="contact-nav"
+                data-top="display:inherit;
+                        animation-play-state: paused;"
+                data-400-end="
+                        animation-play-state: running;"
+                data-300-end="display: none;">
                         <a href="contacto.html" class="contact">Contacto</a>
                     
-            </div>  <!-- .footer -->
+            </div>  <!-- .contact-nav -->
 
             <!-- <svg class="footer-svg" width="100vw" height="5vh">
                 <rect width="100vw" height="5vh"
                 style="fill:var(--naranja);" />
             </svg> -->
+            <script src="js/skrollr.min.js"></script>
+            <script type="text/javascript">
+                skrollr.init();
+            </script>
     </body>
 
 

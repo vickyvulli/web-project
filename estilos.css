@@ -60,14 +60,16 @@ h4{
 
 .header{
     height: 90px;
-    width: 100vw;
+    width: 90%;
     z-index: 1000;
     background-color: var(--blanco);
     position: fixed;
+    margin: 0 auto;
+    left: 5%;
 }
 .logo{
     position: absolute;
-    left: 5.5vw;
+    left: 0;
     top: 15px;
 }
 .logo img{
@@ -75,7 +77,7 @@ h4{
 }
 .lang{
     position: absolute;
-    right: 4.5vw;
+    right: 0;
     top: 45px;
 }
 .lang li{
@@ -96,7 +98,7 @@ h4{
     -------------------
 */
 
-.footer{
+.contact-nav{
     background-color: var(--blanco);
     text-align: center;
     z-index: 900;
@@ -105,12 +107,28 @@ h4{
     width: 100vw;
     bottom: 0;
     padding-top:15px; 
-    display: none;
-}
-.footer a{
-    font-weight: 700;
+    /* display: none; */
 
+    animation: slideOutDown 1s;
 }
+.contact-nav a{
+    font-weight: 700;
+}
+.contact-nav a:hover{
+    color: var(--violeta);
+}
+@keyframes slideOutDown {
+    from {
+        transform: translate3d(0, 0, 0);
+      }
+    
+      to {
+        visibility: hidden;
+        transform: translate3d(0, 100%, 0);
+      }
+}
+    
+
 /* 
     -------------------
     LEFT STARTS HERE 
@@ -149,6 +167,7 @@ main{
     margin: 0 auto;
     top: 100px;
     position: relative;
+    margin-bottom: 16%;
 }
 .index-hero{
     background-color: var(--lightgris);
@@ -320,27 +339,29 @@ main{
     color: var(--blanco);
 }
 .view-more{
-    /* border-bottom: 1px solid var(--violeta); */
-    /* padding: 1% 1.5%; */
+    padding: 1% 1%;
     margin: 0 auto;
     background: none;
     position: relative;
+    display: block;
+    width: 20%;
 }
 .view-more a{
-    padding: 1.5% 2%;
+    padding: 5.5% 10%;
     border-bottom: 1px solid var(--violeta);
     text-align: left;
     color: var(--violeta);
     font-size: 1.75em;
     font-weight: 700;
-    padding-right: 6%;
+    padding-right: 27%;
 }
 .view-more a::before{
     content: "";
     background-image: url(imgs/svg/001-blink-op.svg);
     position: absolute;
-    right: 27%;
-    width: 20%;
+    right: 22%;
+    top: 31%;
+    width: 12%;
     height: 100%;
     background-repeat: no-repeat;
     z-index: -1;
@@ -352,17 +373,18 @@ main{
     transition: background-color .15s;
     background-image: url(imgs/svg/004-eye-op.svg);
     background-repeat: no-repeat;
-    background-position: 83% 50%;
-    background-size: 16%;
+    background-position: 86% 55%;
+    background-size: 15%;
     z-index: 1;
 }
-
 
 
 
 footer{
     /* position: sticky; */
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
 .footer-title{
     margin-bottom: 5%;
@@ -465,10 +487,13 @@ footer{
     MAIN contact STARTS HERE 
     ------------------------
 */
+.main-contact{
+    margin-bottom: 0;
+}
 .contact-hero{
     width: 100%;
     background-color: var(--lightnaranja);
-    padding: 7% 0 3% 0;
+    padding: 10% 0 3% 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -497,16 +522,59 @@ footer{
 .contact-hero-form h1{
     margin-bottom: 5%;
 }
+.contact-form-text p{
+    display: inline;
+}
 .contact-hero-form {
     font-size: 1.25em;
     line-height: 1.5em;
     padding-bottom: 2%;
 }
+.contact-form-text h1{
+    color: var(--violeta);
+}
 .contact-form-footer{
     width: 100%;
     display: flex;
     border: 1px solid var(--gris);
-    padding: 4% 10%;
+    justify-content: space-between;
+}
+.contact-footer-mail{
+    width: 60%;
+    border-right: 1px solid var(--gris);
+}
+.contact-footer-mail input{
+    padding: 8% 6%;
+    width: 100%;
+}
+.contact-footer-sumbit{
+    width: 40%;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    transition: all 0.15s;
+    background-image: url(imgs/svg/008-send-op.svg);
+    background-size: 8%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+}
+.contact-footer-sumbit input{
+    padding: 8% 6%;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    padding-right: 20%;
+}
+
+.contact-footer-sumbit:hover{
+    transition: all 0.15s;
+    background-color: var(--violeta);
+    background-image: url(imgs/svg/010-flying-op.svg);
+
+}
+.contact-footer-sumbit input:hover{
+    color: var(--blanco);
 }
 .contact-form-text > div{
     border-bottom: 1px solid var(--darkblue);
@@ -520,6 +588,9 @@ footer{
     MAIN project STARTS HERE 
     ------------------------
 */
+.main-project{
+    margin-bottom: 8%;
+}
 .project-hero{
     background-color: var(--celeste);
     padding: 14% 0 18.5% 0;
@@ -575,14 +646,20 @@ footer{
     left: 0;
     width: 20%;
 }
+.project-container{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 8%;
+    height: auto;
+    transform: translateY(-100px);
+}
 .project-container-grid{
     width: 90%;
     display: flex;
-    transform: translateY(-100px);
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* margin-bottom: 8%; */
 }
 .grid-medium{
     width: 30%;
