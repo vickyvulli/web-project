@@ -353,8 +353,8 @@ main{
     transition: background-color .15s;
     background-image: url(imgs/svg/004-eye-op.svg);
     background-repeat: no-repeat;
-    background-position: 87% 61%;
-    background-size: 16%;
+    background-position: 89% 61%;
+    background-size: 17%;
     z-index: 1;
 }
 
