@@ -46,6 +46,27 @@ h4{
     letter-spacing: 0.05em;
 }
 
+.tl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.tr{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.bl{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.br{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 /* 
     -------------------
@@ -195,16 +216,10 @@ main{
     height: 1px;
     border: none;
 }
-.hero-graphic-top{
-    position: absolute;
-    top: 0;
-    right: 0;
+.index-t{
     width: 12%;
 }
-.hero-graphic-bottom{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.index-b{
     width: 18%;
 }
 .index-skills{
@@ -493,7 +508,7 @@ footer{
 .contact-hero{
     width: 100%;
     background-color: var(--lightnaranja);
-    padding: 10% 0 3% 0;
+    padding: 8% 0 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -509,7 +524,16 @@ footer{
     font-size: 1em;
     color: var(--violeta);
     padding: 1%;
+    font-weight: 700;
 }
+.contact-tl, .contact-tr{
+    width: 15%;
+}
+.contact-bl, .contact-br{
+    width: 18%;
+    bottom: -3%;
+}
+
 .contact-form-select{
     border: none;
     background: none;
@@ -520,11 +544,11 @@ footer{
     margin-bottom: 8%;
 }
 .contact-hero-form h1{
-    margin-bottom: 5%;
+    margin-bottom: 8%;
 }
-.contact-form-text p{
+/* .contact-form-text p{
     display: inline;
-}
+} */
 .contact-hero-form {
     font-size: 1.25em;
     line-height: 1.5em;
@@ -538,13 +562,14 @@ footer{
     display: flex;
     border: 1px solid var(--gris);
     justify-content: space-between;
+    margin-bottom: 2%;
 }
 .contact-footer-mail{
     width: 60%;
     border-right: 1px solid var(--gris);
 }
 .contact-footer-mail input{
-    padding: 8% 6%;
+    padding: 7% 6%;
     width: 100%;
 }
 .contact-footer-sumbit{
@@ -560,7 +585,7 @@ footer{
     background-position: 80% 50%;
 }
 .contact-footer-sumbit input{
-    padding: 8% 6%;
+    padding: 7% 6%;
     width: 100%;
     height: 100%;
     font-weight: 700;
@@ -634,18 +659,10 @@ footer{
     font-weight: 400;
     color: var(--violeta);
 }
-.project-hero-graphic-top{
-    position: absolute;
-    top: 0;
-    right: 0;
+.project-graphic{
     width: 20%;
 }
-.project-hero-graphic-left{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20%;
-}
+
 .project-container{
     width: 100%;
     display: block;
