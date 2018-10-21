@@ -508,7 +508,7 @@ footer{
     background: none;
     font-size: 1em;
     color: var(--violeta);
-
+    padding: 1%;
 }
 .contact-form-select{
     border: none;
