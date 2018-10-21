@@ -277,6 +277,8 @@ main{
 .grid-big{
     width: 48%;
     position: relative;
+    display: flex;
+    align-items: baseline;
 }
 .grid-big img{
     width: 100%;
@@ -321,6 +323,8 @@ main{
 .grid-small{
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: baseline;
 }
 .grid-small img{
     width: 100%;
@@ -577,6 +581,7 @@ footer{
     height: 100%;
     font-weight: 700;
     padding-right: 20%;
+    cursor: pointer;
 }
 
 .contact-footer-sumbit:hover{
@@ -669,6 +674,8 @@ footer{
     width: 30%;
     position: relative;
     margin-bottom: 5%;
+    display: flex;
+    align-items: baseline;
 }
 .grid-medium img{
     width: 100%;
