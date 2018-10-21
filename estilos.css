@@ -327,19 +327,6 @@ main{
     top: 0;
     left: 0;
 }
-.grid-small-info{
-    z-index: 900;
-    width: 100%;
-    background-color: yellow;
-    padding: 5% 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    display: inline-grid;
-    opacity: 0;
-    transition: opacity .5s;
-}
 .siluetas{
     background-color: #41a2b6;
 }
