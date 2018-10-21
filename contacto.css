@@ -35,8 +35,8 @@ div.cs-skin-border {
 
 .cs-skin-border .cs-selected span::after {
 	content: '\e00e';
-	color: #ddd9c9;
-	font-size: 1.5em;
+	color: var(--mediumgris);
+	font-size: 2em;
 	opacity: 1;
 	transition: opacity 0.2s;
 }
@@ -82,7 +82,7 @@ div.cs-select {
 	position: relative;
 	text-align: left;
 	/* background: #fff; */
-	z-index: 100;
+	/* z-index: 100; */
 	/* width: 100%;
 	max-width: 500px; */
 }
@@ -127,7 +127,7 @@ div.cs-select:focus {
 
 .cs-select .cs-selected span::after {
 	/* content: '\2713'; */
-	margin-left: 1em;
+	margin-left: 0.5em;
 }
 
 .cs-select.cs-active > span::after {
@@ -176,4 +176,8 @@ div.cs-active {
 
 .cs-select li.cs-optgroup > span {
 	cursor: default;
+}
+
+.cs-width{
+	min-width: 140px;
 }

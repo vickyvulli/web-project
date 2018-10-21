@@ -37,8 +37,8 @@
                     <form action="">
                         <div class="contact-form-text">
                             <h1>¡Hola Vicky!</h1>
-                            <!-- <p> -->
-                                Te estoy contactando de parte de <input placeholder="empresa/organización" required>, me interesaría poder hablar con vos sobre un proyecto de  
+                            
+                                Te estoy contactando de parte de <input  type="text" placeholder="Empresa/organización" required>, me interesaría poder hablar con vos sobre un proyecto de  
                                 <div class="cs-select cs-skin-border">
                                     <div class="cs-options">
                                         <ul>
@@ -59,9 +59,9 @@
                                 </div>
        
                             .
-                        <!-- </p> -->
+                        
                         <br>
-                        <!-- <p> -->
+                        <span aria-hidden="true" class="espacio"></span>
                             
                             Quisiera arreglar una 
                                 <div class="cs-select cs-skin-border">
@@ -72,18 +72,19 @@
                                             <li data-option data-value="reunion"><span>reunión</span></li>
                                         </ul>
                                     </div> <!-- contact-form-options -->
-                                <select class="cs-select cs-skin-border" name="forma de contacto" required>
+                                <select class="cs-select cs-skin-border cs-width" name="forma de contacto" required>
                                     <option value="llamada">videollamada</option>
                                     <option value="email">e-mail</option>
                                     <option value="reunion">reunión</option>
                                 </select>
                                 </div>
                                 con vos para charlar sobre el mismo.
+                        
                         <br>
-                        <!-- </p> -->
-                        <!-- <p> -->
-                                Saludos,<br><input placeholder="nombre" required>.
-                        <!-- </p> -->
+                        <span aria-hidden="true" class="espacio"></span>
+
+                                Saludos,<br><input type="text" placeholder="Nombre" required>.
+
                         </div> <!-- contact-form-text -->
 
 
@@ -107,7 +108,9 @@
         <div class="right">
             <a href="perfil.html">Sobre mi</a>
         </div>  <!-- .right -->
-        
+
+
+<script src="js/stretchy.min.js" ></script>     
 <script src="js/classie.js"></script>
 <script src="js/selectFx.js"></script>
 <script>

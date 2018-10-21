@@ -532,10 +532,12 @@ footer{
     color: var(--violeta)
 }
 .contact-form-text{
-    margin-bottom: 8%;
+    margin-bottom: 4%;
 }
 .contact-hero-form h1{
     margin-bottom: 8%;
+    color: var(--violeta);
+
 }
 /* .contact-form-text p{
     display: inline;
@@ -544,9 +546,6 @@ footer{
     font-size: 1.25em;
     line-height: 1.5em;
     padding-bottom: 2%;
-}
-.contact-form-text h1{
-    color: var(--violeta);
 }
 .contact-form-footer{
     width: 100%;
@@ -596,7 +595,10 @@ footer{
 .contact-form-text > div{
     border-bottom: 1px solid var(--darkblue);
 }
-
+.espacio{
+    display: block;
+    margin-bottom: 2%;
+  }
 
 
 
