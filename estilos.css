@@ -9,6 +9,7 @@
     --lightnaranja: #fccaa7;
     --blanco: #ffffff;
     --celeste: #a5cafa;
+    --lightvioleta: #9b6fef;
 }
 *{
     padding: 0; margin: 0;
@@ -66,6 +67,16 @@ h4{
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
 }
 
 /* 
@@ -193,12 +204,12 @@ main{
 .index-hero{
     background-color: var(--lightgris);
     padding: 16.5% 0;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
+    position: relative; */
 }
 .index-hero-welcome h2{
     /* font-size: 2.6em; */
@@ -497,14 +508,15 @@ footer{
     margin-bottom: 0;
 }
 .contact-hero{
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--lightnaranja);
     padding: 8% 0 0 0;
-    display: flex;
+    text-align: left;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: relative; */
 }
 .contact-hero-form{
     width: 60%;
@@ -611,14 +623,15 @@ footer{
     margin-bottom: 8%;
 }
 .project-hero{
+    /* width: 100%; */
     background-color: var(--celeste);
     padding: 14% 0 18.5% 0;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
+    position: relative; */
 }
 .project-hero-title{
     width: 100%;
@@ -692,4 +705,302 @@ footer{
 }
 .cartografia{
     background-color: #e56061;
+}
+
+
+
+/* 
+    ------------------------
+    MAIN comingsoon STARTS HERE 
+    ------------------------
+*/
+
+.main-comingsoon{
+    margin-bottom: 0;
+}
+.comingsoon-hero{
+    /* width: 100%; */
+    background-color: var(--darkblue);
+    padding: 12% 0 0 0;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative; */
+}
+.comingsoon-hero-form {
+    font-size: 1.25em;
+    line-height: 1.5em;
+    padding-bottom: 2%;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+.comingsoon-hero-form h1{
+    margin-bottom: 8%;
+    color: var(--lightvioleta);
+
+}
+.comingsoon-hero-form p{
+    color: var(--blanco);
+}
+.comingsoon-form-text{
+    margin-bottom: 18%;
+}
+.comingsoon-footer{
+    border: 1px solid var(--blanco);
+}
+.comingsoon-footer div:nth-child(1){
+    border-right: 1px solid var(--blanco);
+}
+.suscribe input{
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: var(--naranja);
+    font-weight: 700;
+}
+.suscribe input::placeholder{
+    color: var(--lightgris);
+}
+.suscribe-footer-submit{
+    background-image: url(imgs/svg/008-send-cs-op.svg);
+    background-position: 72% 50%;
+}
+
+.suscribe-footer-submit:hover{
+    background-color: var(--naranja);
+}
+.first-tl{
+    width: 5%;
+    top: 10%;
+    left: 15%;
+}
+.second-tl{
+    width: 5%;
+    top: 25%;
+    left: 10%;
+} 
+.first-tr{
+    width: 5%;
+    top: 10%;
+    right: 15%;
+} 
+.second-tr{
+    width: 5%;
+    top: 25%;
+    right: 10%;
+}
+
+.comingsoon-bl{
+    width: 110%;
+    bottom: -8%;
+    left: -5%;
+    z-index: 10000;
+}
+
+
+
+/* 
+    ------------------------
+    MAIN perfil STARTS HERE 
+    ------------------------
+*/
+.profile-hero{
+    background-color: var(--lightvioleta);
+    padding: 20% 0 20% 0;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; */
+}
+.profile-hero h1{
+    color: var(--blanco);
+    letter-spacing: 0.05em;
+}
+
+.profile-about{
+    width: 100%;
+    display: block;
+}
+.profile-about-description{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+}
+.profile-description-left{
+    width: 50%;
+    position: relative;
+}
+.profile-description-left h2{
+    color: var(--naranja);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    position: absolute;
+    bottom: 23%;
+    z-index: 100;
+}
+.profile-description-left img{
+    position: absolute;
+    left: 10.6%;
+    top: 12%;
+    width: 55%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .15)
+}
+.profile-description-right{
+    width: 50%;
+    padding: 8% 0;
+}
+.profile-description-right p{
+    line-height: 1.5em;
+    margin-bottom: 2.5%;
+    font-size: 1.25em;
+
+}
+.profile-about-jobs{
+    width: 100%;
+    display: block;
+    background-color: var(--violeta);
+    padding: 5% 0;
+}
+.profile-about-jobs h4{
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 5%;
+}
+.profile-jobs-history{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.profile-job{
+    width: 33.5%;
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    position: relative;    
+}
+.profile-job h2, .profile-job p{
+    color: var(--blanco);
+    margin-bottom: 2.5%;
+}
+.profile-job h4{
+    font-size: 1em;
+    margin-bottom: 10%;
+}
+.profile-job hr{
+    width: 100%;
+    background: var(--blanco);
+    height: 1px;
+    border: none;
+    margin-bottom: 8%;
+
+}
+.job-dot{
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--blanco);
+    border-radius: 50%;
+    display: inline-block;
+    transform: translate(0px, 12px);
+}
+.empty-dot{
+    background-color: var(--violeta);
+}
+.full-dot{
+    background-color: var(--blanco);
+}
+
+.profile-skills{
+    background-color: var(--lightgris);
+    width: 100%;
+    text-align: center;
+    padding: 8% 0 2% 0;
+}
+.profile-skills-container{
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+.profile-skills h4{
+    margin-bottom: 8%;
+}
+.profile-skills-detail{
+    width: 40%;
+    background-color: var(--blanco);
+    padding: 9% 0 3% 0;
+    margin-bottom: 12%;
+    position: relative;
+}
+.profile-skills-detail img{
+    width: 30%;
+    position: absolute;
+    top: -17%;
+    left: 35%;
+}
+.profile-skills-detail h3{
+    margin-bottom: 8%;
+    letter-spacing: 0.025em;
+
+}
+.profile-skills-detail li{
+    line-height: 1.5em;
+}
+
+
+
+/* 
+    ------------------------
+    MAIN werk STARTS HERE 
+    ------------------------
+*/
+.werk-hero{
+    background-color: #c01cea;
+    padding: 19% 0;
+}
+.werk-hero-text h1{
+    color: var(--blanco);
+    margin-bottom: 5%;
+}
+.werk-hero-text p{
+    color: var(--blanco);
+    font-size: 1.25em;
+}
+.werk-description{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5% 0;
+    font-size: 1.25em;
+    line-height: 1.35em;
+}
+.werk-description-left{
+    width: 45%;
+}
+.werk-description-right{
+    width: 45%;
+}
+.werk-list-category{
+    color: #ff5e3d;
+    margin-bottom: 1%;
+}
+.category-year{
+    margin-top: 5%;
+}
+.werk-description-right p{
+    margin-bottom: 3%;
+}
+
+.swiper-container{
+    width: 100%;
+    height: 460px;
+}
+.swiper-slide{
+    background-color: #212d50;
+    color: white;
 }
