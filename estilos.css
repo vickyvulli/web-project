@@ -43,7 +43,7 @@ h3{
 h4{
     font-size: 1.25em;
     font-weight: 400;
-    padding-bottom: 2%;
+    margin-bottom: 2%;
     letter-spacing: 0.05em;
 }
 
@@ -971,7 +971,7 @@ footer{
     color: var(--blanco);
     font-size: 1.25em;
 }
-.werk-description{
+.project-description{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -979,20 +979,21 @@ footer{
     font-size: 1.25em;
     line-height: 1.35em;
 }
-.werk-description-left{
+.project-description-left{
     width: 45%;
 }
-.werk-description-right{
+.project-description-right{
     width: 45%;
 }
-.werk-list-category{
+.project-list-category{
     color: #ff5e3d;
     margin-bottom: 1%;
+    font-size: 1em;
 }
 .category-year{
     margin-top: 5%;
 }
-.werk-description-right p{
+.project-description-right p{
     margin-bottom: 3%;
 }
 
@@ -1004,3 +1005,123 @@ footer{
     background-color: #212d50;
     color: white;
 }
+.project-content-container{
+    width: 100%;
+}
+
+
+.werk-content-01{
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 0;
+    background-image: url(imgs/projects/proyecto-werk-02.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 73%;
+    margin-bottom: 5%;
+    
+}
+.werk-content-logo{
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15%;
+}
+.werk-content-poster{
+    width: 40%;
+    z-index: 100;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
+    margin-left: 5%;
+}
+.werk-content-02{
+    width: 100%;
+    background-image: url(imgs/projects/proyecto-werk-04-op.jpg);
+    background-repeat: no-repeat;
+    padding: 10% 0;
+    display: flex;
+}
+.werk-content-02 img{
+    width: 80%;
+    margin: 0 auto;
+    align-self: center;
+    
+}
+.werk-content-03{
+    width: 100%;
+    background-color: #fdf5bb;
+    padding: 5% 0;
+}
+
+
+.project-behance-link{
+    color: var(--violeta);
+    font-size: 1.25em;
+    font-weight: 600;
+    text-align: center;
+    width: 35%;
+    margin: 5% auto;
+    display: flex;
+    padding: 2%;
+    justify-content: center;
+}
+.project-behance-link:hover{
+    color: var(--darkblue);
+}
+.project-footer-links{
+    background-color: var(--lightgris);
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 5% 0;
+    display: flex;
+}
+.project-footer-links div{
+    width: 40%;
+}
+.project-footer-links h4{
+    margin-bottom: 1%;
+}
+.project-footer-links a{
+    font-size: 2.6em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.project-footer-links a:hover{
+    color: var(--violeta);
+
+}
+
+
+/* 
+    ------------------------
+    MAIN siluetas STARTS HERE 
+    ------------------------
+*/
+.siluetas-hero{
+    background-color: #69a8bd;
+    padding: 17.5% 0;
+}
+.siluetas-content-01{
+    background-color: #69a8bd;
+    width: 100%;
+    justify-content: center;
+}
+.siluetas-content-01 img{
+    width: 80%;
+    margin: 0 auto;
+}
+.siluetas-content-03{
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    text-align: center;
+}
+.siluetas-03-detalles{
+    width: 40%;
+}
+.siluetas-03-detalles img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+
