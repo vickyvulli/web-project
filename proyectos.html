@@ -34,19 +34,34 @@
                     <h1>Descubrí como puedo ayudarte</h1>
                     <hr>
                 </div>
-                <ul class="project-hero-menu">
-                    <li><a href="">Todos <sup>15</sup></a></li>
-                    <li><a href="">Editorial</a></li>
-                    <li><a href="">Ilustración</a></li>
-                    <li><a href="">Branding</a></li>
-                    <li><a href="">Diseño web</a></li>
-                </ul>
+                <div id="project-hero-menu">
+                    <button class="btn active" 
+                            onclick="filterSelection('all')">
+                        Todos
+                    </button>
+                    <button class="btn" 
+                            onclick="filterSelection('editorial')">
+                        Editorial
+                    </button>
+                    <button class="btn" 
+                            onclick="filterSelection('illustration')">
+                        Ilustración
+                    </button>
+                    <button class="btn" 
+                            onclick="filterSelection('branding')">
+                        Branding
+                    </button>
+                    <button class="btn" 
+                            onclick="filterSelection('webdesign')">
+                        Diseño web
+                    </button>
+                </div>
                 <img class="project-graphic tr" src="imgs/project-hero-right-07-op.svg" alt="">
                 <img class="project-graphic tl" src="imgs/project-hero-left-06-op.svg" alt="">
             </section> <!-- .project-hero -->
             <section class="project-container">
                 <div class="project-container-grid">
-                    <a href="proyecto-werk.html" class="grid-medium">
+                    <a href="proyecto-werk.html" class="grid-medium branding editorial webdesign">
                         <div class="grid-big-info werk">
                             <p class="info-blanca">Branding<br>Editorial<br>Diseño web</p>
                             <div class="grid-info-center">
@@ -58,7 +73,7 @@
                         <img src="imgs/home-proyecto-werk.jpg" alt="Werk festival">
                     </a>
 
-                    <a href="proyecto-siluetas.html" class="grid-medium">
+                    <a href="proyecto-siluetas.html" class="grid-medium illustration editorial">
                         <div class="grid-big-info siluetas">
                             <p class="info-blanca">Ilustración<br>Editorial</p>
                             <div class="grid-info-center">
@@ -70,7 +85,7 @@
                         <img src="imgs/home-proyecto-siluetas-big.jpg" alt="Siluetas">
                     </a>
 
-                    <a href="proyecto-fasciculos.html" class="grid-medium">
+                    <a href="proyecto-fasciculos.html" class="grid-medium editorial">
                         <div class="grid-big-info fasiculos">
                             <p class="info-blanca">Editorial</p>
                             <div class="grid-info-center">
@@ -82,7 +97,7 @@
                         <img src="imgs/home-proyecto-fasiculos-big.jpg" alt="Fasiculos coleccionables">
                     </a>
 
-                    <a href="proximamente.html" class="grid-medium">
+                    <a href="proximamente.html" class="grid-medium illustration">
                         <div class="grid-big-info diversidad">
                             <p class="info-blanca">Ilustración</p>
                             <div class="grid-info-center">
@@ -94,7 +109,7 @@
                         <img src="imgs/home-proyecto-diversidad.jpg" alt="Afiche sobre diversidad">
                     </a>
 
-                    <a href="proximamente.html" class="grid-medium">
+                    <a href="proximamente.html" class="grid-medium branding illustration">
                         <div class="grid-big-info inversion">
                             <p class="info-blanca">Branding<br>Ilustración</p>
                             <div class="grid-info-center">
@@ -106,7 +121,7 @@
                         <img src="imgs/home-proyecto-inversion.jpg" alt="Afiche retorico">
                     </a>
 
-                    <a href="proximamente.html" class="grid-medium">
+                    <a href="proximamente.html" class="grid-medium branding editorial">
                         <div class="grid-big-info cartografia">
                             <p class="info-blanca">Branding<br>Editorial</p>
                             <div class="grid-info-center">
@@ -117,10 +132,48 @@
                         </div>
                         <img src="imgs/home-proyecto-cartografia.jpg" alt="Cartografía">
                     </a>
+
+                    <div id="moreProjects" class="hide inside-container">
+                        <a href="proximamente.html" class="grid-medium illustration">
+                                <div class="grid-big-info diversidad">
+                                    <p class="info-blanca">Ilustración</p>
+                                    <div class="grid-info-center">
+                                        <h2 class="info-blanca">Diversidad</h2>
+                                        <p class="info-blanca">2016</p>
+                                    </div>
+                                    <p class="info-tematica">AFICHE SOBRE DIVERSIDAD CULTURAL</p>
+                                </div>
+                                <img src="imgs/home-proyecto-diversidad.jpg" alt="Afiche sobre diversidad">
+                            </a>
+        
+                            <a href="proximamente.html" class="grid-medium branding illustration">
+                                <div class="grid-big-info inversion">
+                                    <p class="info-blanca">Branding<br>Ilustración</p>
+                                    <div class="grid-info-center">
+                                        <h2 class="info-blanca">Fondo de inversión</h2>
+                                        <p class="info-blanca">2017</p>
+                                    </div>
+                                    <p class="info-tematica">ESTADOS DEL MUNDO</p>
+                                </div>
+                                <img src="imgs/home-proyecto-inversion.jpg" alt="Afiche retorico">
+                            </a>
+                            <a href="proximamente.html" class="grid-medium branding illustration">
+                                <div class="grid-big-info inversion">
+                                    <p class="info-blanca">Branding<br>Ilustración</p>
+                                    <div class="grid-info-center">
+                                        <h2 class="info-blanca">Fondo de inversión</h2>
+                                        <p class="info-blanca">2017</p>
+                                    </div>
+                                    <p class="info-tematica">ESTADOS DEL MUNDO</p>
+                                </div>
+                                <img src="imgs/home-proyecto-inversion.jpg" alt="Afiche retorico">
+                            </a>
+                    </div> <!-- .moreProjects -->
                 </div> <!-- .project-container-grid -->
 
-                <div class="view-more">
-                    <a href="proyectos.html">Ver más </a>
+
+                <div id="viewMore" class="viewMore">
+                    <button>Ver más </button>
                 </div>
 
             </section><!-- .project-container-grid -->
@@ -180,6 +233,70 @@
     <script type="text/javascript">
         skrollr.init();
     </script>
+
+    <script>
+        viewMore.addEventListener("click", 
+                                  function(){
+                                      moreProjects.classList.add("showContainer");
+                                      viewMore.classList.add("hide");
+        });
+    </script>
+
+    <script>
+        filterSelection("all");
+        //var all = document.getElementsByClassName("all");
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("grid-medium");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1); 
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("project-hero-menu");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+       
+        
+    </script>
+
 
     </body>
 

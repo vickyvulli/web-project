@@ -7,6 +7,19 @@
         <link rel="stylesheet" href="estilos.css">
         <link href="imgs/favicon.png" rel="shortcut icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <meta name="keywords" content="victoria, vullioud, diseño gráfico, freelance, buenos aires, editorial, illustración, diseño digital">
+        <meta name="author" content="Victoria Vullioud">
+        <meta name="description" content="Diseñadora gráfica freelance de Buenos Aires, Argentina">
+        
+        <meta name="robots" content="noindex, nofollow">
+
+        <meta property="og:title" content="Victoria Vullioud - Diseñadora freelance">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://vv-works.netlify.com/index.html">
+        <meta property="og:image" content="imgs/og-index-01-op.svg">
+
+
     </head>
 
     <body>
@@ -32,7 +45,7 @@
                 <section class="hero index-hero">
                     <div class="index-hero-welcome">
                         <h4>Hola, soy Victoria!</h4>
-                        <h2>Diseñadora gráfica <span>independiente</span>|<br>con base en Buenos Aires, Argentina</h2>
+                        <h2>Diseñadora gráfica <span class="secondary__title"></span>|<br>con base en Buenos Aires, Argentina</h2>
                         <hr>
                     </div>
                     <img class="tr index-t" src="imgs/hero-graphic-03-op.svg" alt="">
@@ -182,6 +195,61 @@
             <script src="js/skrollr.min.js"></script>
             <script type="text/javascript">
                 skrollr.init();
+            </script>
+
+            <script>
+                class Typewritter {
+                constructor({ text, time = 260 }) {
+                    this.texts = text.split(",");
+                    this.sT = document.querySelector(".secondary__title");
+                    this.realTime = time;
+                    this.wait = time + 3000;
+                    this.changeTime = 0;
+                    this.length = this.texts.length;
+                    this.countChar = 0;
+                    this.current = 0;
+                    this.flag = false;
+
+                    this.cutText();
+                }
+
+                cutText() {
+                    const text = this.texts[this.current];
+                    const tLength = this.texts[this.current].length;
+                    
+                    if (this.countChar === tLength) this.changeTime = this.wait;
+                    if (this.flag && this.countChar === tLength - 1)
+                    this.changeTime = this.realTime / 2;
+                    if (this.countChar === 0) this.changeTime = this.realTime;
+
+                    this.drawText(text.substr(0, this.countChar));
+
+                    if (!this.flag) {
+                    this.countChar++;
+                    if (this.countChar === tLength) {
+                        this.flag = true;
+                    }
+                    } else if (this.flag) {
+                    this.countChar--;
+                    if (this.countChar === 0) {
+                        this.flag = false;
+                        this.current = ++this.current % this.length;
+                    }
+                    }
+
+                    setTimeout(() => this.cutText(), this.changeTime);
+                }
+
+                drawText(chars) {
+                    this.sT.innerHTML = chars;
+                    }
+                }
+
+                new Typewritter({
+                text: "independiente, creativa, apasionada, multifacética, freelance", // Set words separate with commas in this property
+                time: 260 // Set speed of writing
+                });
+
             </script>
     </body>
 
