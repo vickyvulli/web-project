@@ -8,17 +8,19 @@
         <link href="imgs/favicon.png" rel="shortcut icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-        <meta name="keywords" content="victoria, vullioud, diseño gráfico, freelance, buenos aires, editorial, illustración, diseño digital">
+        <meta name="keywords" content="victoria, vullioud, diseño gráfico, freelance, buenos aires, editorial, illustración, branding, diseño digital">
         <meta name="author" content="Victoria Vullioud">
         <meta name="description" content="Diseñadora gráfica freelance de Buenos Aires, Argentina">
         
         <meta name="robots" content="noindex, nofollow">
 
         <meta property="og:title" content="Victoria Vullioud - Diseñadora freelance">
+        <meta property="og:description" content="Diseñadora gráfica de Buenos Aires, Argentina" />
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://vv-works.netlify.com/index.html">
         <meta property="og:image" content="imgs/og-index-01-op.svg">
-
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="262" />
 
     </head>
 
@@ -57,33 +59,96 @@
                         <h1>Lo que se hacer muy bien.</h1>
                     </div>
                     <div class="index-skills-list">
-                        <ul>
-                            <li class="skills-editorial">
-                                <a href="">
+                        <ul id="skillsList">
+                            <li id="skillsEditorial">
                                     <span class="number">01.</span>
                                     <h3 class="skill">Editorial</h3>
-                                </a>
                             </li>
-                            <li class="skills-ilustracion">
-                                <a href="">
+                            <li id="skillsIllustration">
                                     <span class="number">02.</span>
                                     <h3 class="skill">Ilustración</h3>
-                                </a>
                                 </li>
-                                <li class="skills-branding">
-                                <a href="">
+                            <li id="skillsBranding">
                                     <span class="number">03.</span>
                                     <h3 class="skill">Branding</h3>
-                                </a>
                             </li>
-                            <li class="skills-web">
-                                <a href="">
+                            <li id="skillsWeb">
                                     <span class="number">04.</span>
-                                    <h3 class="skill">Diseño web</h3>
-                                </a>
+                                    <h3 class="skill">Diseño digital</h3>
                             </li>
                         </ul>
-                    </div>
+                    
+                        <div id="infoEditorial" class="skills-info-container hide">
+                            <div class="skills-img-container">
+                                <img src="imgs/index-skill-editorial-01.png" alt="Editorial">
+                            </div>
+
+                            <div class="skills-info">
+                                <div class="skills-info-title">
+                                    <span class="number">01. </span>
+                                    <h3 class="skill"> Editorial</h3>
+                                </div>
+                                
+                                <h4>REVISTAS · LIBROS · PORTFOLIOS · FASCÍCULOS</h4>
+                                <p>Puedo ayudarte a editar el contenido para que la diagramación del mismo permita su legibilidad.</p>
+                                <i class="fas fa-times close-skills"></i>
+                            </div>
+                            
+                        </div>
+
+                        <div id="infoIllustration" class="skills-info-container hide">
+                            <div class="skills-img-container">
+                                <img src="imgs/index-skill-editorial-01.png" alt="Ilustración">
+                            </div>
+
+                            <div class="skills-info">
+                                <div class="skills-info-title">
+                                    <span class="number">02. </span>
+                                    <h3 class="skill"> Ilustración</h3>
+                                </div>
+                                
+                                <h4>DIGITAL · LITERARIA · COLLAGE · EDUCATIVA</h4>
+                                <p>Crear mensajes visuales a través de diferentes técnicas considerando las necesidades específicas.</p>
+                                <i class="fas fa-times close-skills"></i>
+                            </div>
+                        
+                        </div>
+                        <div id="infoBranding" class="skills-info-container hide">
+                            <div class="skills-img-container">
+                                <img src="imgs/index-skill-editorial-01.png" alt="Ilustración">
+                            </div>
+
+                            <div class="skills-info">
+                                <div class="skills-info-title">
+                                    <span class="number">03. </span>
+                                    <h3 class="skill"> Branding</h3>
+                                </div>
+                                
+                                <h4>PIEZAS GRÁFICAS · PAPELERÍA · MANUALES DE MARCA </h4>
+                                <p>Desarrollar un estilo memorable alineado a la comunicación, necesidades y objetivos de la marca.</p>
+                                <i class="fas fa-times close-skills"></i>
+                            </div>
+                        
+                        </div>
+                        <div id="infoWeb" class="skills-info-container hide">
+                            <div class="skills-img-container">
+                                <img src="imgs/index-skill-editorial-01.png" alt="Ilustración">
+                            </div>
+
+                            <div class="skills-info">
+                                <div class="skills-info-title">
+                                    <span class="number">04. </span>
+                                    <h3 class="skill"> Diseño digital</h3>
+                                </div>
+                                
+                                <h4>LANDING PAGES · MAILINGS · COMMUNITY MANAGEMENT  · DISEÑO WEB </h4>
+                                <p>La presencia digital, hoy en día, es igual de importante que la física, puedo ayudarte a desarrollarla.</p>
+                                <i class="fas fa-times close-skills"></i>
+                            </div>
+                        
+                        </div>
+                    
+                    </div> <!-- .index-skills-list -->
                 </section> <!-- .index-skills -->
 
                 <section class="index-recent">
@@ -250,7 +315,45 @@
                 time: 260 // Set speed of writing
                 });
 
+                
+                
+                /* SKILLS JS*/
+
+                var close = document.getElementsByClassName("close-skills");
+
+                skillsEditorial.addEventListener("click", function(){
+                    skillsList.classList.add("hide");
+                    infoEditorial.classList.remove("hide");
+                    infoEditorial.classList.add("showContainer");
+                });
+                skillsIllustration.addEventListener("click", function(){
+                    skillsList.classList.add("hide");
+                    infoIllustration.classList.remove("hide");
+                    infoIllustration.classList.add("showContainer");
+                });
+                skillsBranding.addEventListener("click", function(){
+                    skillsList.classList.add("hide");
+                    infoBranding.classList.remove("hide");
+                    infoBranding.classList.add("showContainer");
+                });                
+                skillsWeb.addEventListener("click", function(){
+                    skillsList.classList.add("hide");
+                    infoWeb.classList.remove("hide");
+                    infoWeb.classList.add("showContainer");
+                });
+
+                function closeSkill(){
+                    for(i = 0; i < close.length; i++){
+                        close[i].addEventListener("click", function(){
+                            var current = document.getElementsByClassName("showContainer");
+                            current[0].className = current[0].className.replace("showContainer", "hide");
+                            skillsList.classList.remove("hide");
+                        });
+                    }
+
+                }
             </script>
+
     </body>
 
 

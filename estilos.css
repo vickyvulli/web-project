@@ -10,6 +10,7 @@
     --blanco: #ffffff;
     --celeste: #a5cafa;
     --lightvioleta: #9b6fef;
+    --blue: #1856c3;
 }
 *{
     padding: 0; margin: 0;
@@ -247,23 +248,78 @@ main{
 .index-skills-list{
     width: 70%;
     background-color: var(--naranja);
-    padding-left: 5.5%;
     display: flex;    
     align-items: center;
 }
-.index-skills-list li{
-    padding-bottom: 10%;
+#skillsList{
+    margin-left: 5.5%;
 }
-.index-skills-list li:last-child{
+#skillsList li{
+    padding-bottom: 10%;
+    cursor: pointer;
+
+}
+#skillsList li:last-child{
     padding-bottom: 0;
 }
-.index-skills-list .number{
+#skillsList .number{
     font-size: 1em;
 }
-.index-skills-list .skill{
+#skillsList .skill{
     /* font-size: 1.75em; */
     font-weight: 700;
     display: inline;
+}
+
+.skills-info-container{
+    width: 100%;
+    display: flex;
+}
+.skills-img-container{
+    width: 45%;
+    background-color: var(--blue);
+    display: flex;
+    margin-right: 5%;
+}
+.skills-img-container img{
+    width: 55.25%;
+    margin: 17% auto;
+    align-self: center;
+}
+.skills-info{
+    width: 45%;
+    align-items: center;
+    position: relative;
+    display: grid;
+    padding: 15% 0;
+    padding-right: 4%;
+}
+.skills-info-title{
+    display: inline-flex;
+    align-items: baseline;
+    width: 100%;
+}
+.skills-info-title span{
+    margin-right: 1%;
+}
+
+.skills-info h4{
+    padding-bottom: 4%;
+    padding-left: 7%;
+    font-size: 1em;
+}
+.skills-info p{
+    padding-left: 7%;
+}
+
+.close-skills{
+    position: absolute;
+    cursor: pointer;
+    padding: 2%;
+    color: var(--blanco);
+    font-size: 1.25em;
+    top: 12%;
+    right: 6%;
 }
 
 
