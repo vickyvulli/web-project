@@ -322,6 +322,41 @@ main{
     right: 6%;
 }
 
+.rollInLeft {
+    animation-name: rollInLeft;
+    animation-duration: 1s;
+    transform-origin: left center;
+  }
+@keyframes rollInLeft {
+    from {
+      opacity: 0;
+      transform: scale(0.1, 1);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1, 1);
+    
+    }
+  }
+.fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    transform-origin: left center;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInLeft {
+  
+    to {
+      opacity: 1;
+    
+    }
+  }
+  
+
+
 
 .index-recent{
     width: 100%;
@@ -755,19 +790,13 @@ footer{
     border-bottom: 1px solid var(--violeta);
     text-align: left;
     padding-right: 27%;
+    background-image: url(imgs/svg/001-blink-op.svg);
+    background-repeat: no-repeat;
+    background-position: 86% 55%;
+    background-size: 15%;
     /* width: 20%; */
 }
-.viewMore button::before{
-    content: "";
-    background-image: url(imgs/svg/001-blink-op.svg);
-    position: absolute;
-    right: 13%;
-    top: 31%;
-    width: 13%;
-    height: 100%;
-    background-repeat: no-repeat;
-    z-index: 0;
-}
+
 .viewMore button:hover{
     color: var(--blanco);
     background-color: var(--violeta);
@@ -864,6 +893,8 @@ footer{
     text-align: center;
     width: 60%;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 .comingsoon-hero-form h1{
     margin-bottom: 8%;
@@ -930,17 +961,20 @@ iframe{
     border: none;
 }
 .comingsoon-bl{
-    width: 110%;
+    width: 105%;
     bottom: -5%;
-    left: -5%;
+    left: -2.5%;
     z-index: 10000;
-    height: 278px;
 }
 .comingsoonDown{
     overflow: hidden;
     bottom: -28%;
+    clip: rect(0px,1425px,158px,0);
 }
-
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
 
 
 /* 

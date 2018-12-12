@@ -79,11 +79,11 @@
                         </ul>
                     
                         <div id="infoEditorial" class="skills-info-container hide">
-                            <div class="skills-img-container">
+                            <div class="skills-img-container rollInLeft">
                                 <img src="imgs/index-skill-editorial-01.png" alt="Editorial">
                             </div>
 
-                            <div class="skills-info">
+                            <div class="skills-info fadeInLeft">
                                 <div class="skills-info-title">
                                     <span class="number">01. </span>
                                     <h3 class="skill"> Editorial</h3>
@@ -97,11 +97,11 @@
                         </div>
 
                         <div id="infoIllustration" class="skills-info-container hide">
-                            <div class="skills-img-container">
+                            <div class="skills-img-container rollInLeft">
                                 <img src="imgs/index-skill-editorial-01.png" alt="Ilustración">
                             </div>
 
-                            <div class="skills-info">
+                            <div class="skills-info fadeInLeft">
                                 <div class="skills-info-title">
                                     <span class="number">02. </span>
                                     <h3 class="skill"> Ilustración</h3>
@@ -114,11 +114,11 @@
                         
                         </div>
                         <div id="infoBranding" class="skills-info-container hide">
-                            <div class="skills-img-container">
+                            <div class="skills-img-container rollInLeft">
                                 <img src="imgs/index-skill-editorial-01.png" alt="Ilustración">
                             </div>
 
-                            <div class="skills-info">
+                            <div class="skills-info fadeInLeft">
                                 <div class="skills-info-title">
                                     <span class="number">03. </span>
                                     <h3 class="skill"> Branding</h3>
@@ -131,11 +131,11 @@
                         
                         </div>
                         <div id="infoWeb" class="skills-info-container hide">
-                            <div class="skills-img-container">
+                            <div class="skills-img-container rollInLeft">
                                 <img src="imgs/index-skill-editorial-01.png" alt="Ilustración">
                             </div>
 
-                            <div class="skills-info">
+                            <div class="skills-info fadeInLeft">
                                 <div class="skills-info-title">
                                     <span class="number">04. </span>
                                     <h3 class="skill"> Diseño digital</h3>
@@ -325,6 +325,7 @@
                     skillsList.classList.add("hide");
                     infoEditorial.classList.remove("hide");
                     infoEditorial.classList.add("showContainer");
+
                 });
                 skillsIllustration.addEventListener("click", function(){
                     skillsList.classList.add("hide");
@@ -348,10 +349,12 @@
                             var current = document.getElementsByClassName("showContainer");
                             current[0].className = current[0].className.replace("showContainer", "hide");
                             skillsList.classList.remove("hide");
+                            
                         });
                     }
 
                 }
+                closeSkill();
             </script>
 
     </body>

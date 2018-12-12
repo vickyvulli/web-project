@@ -25,7 +25,7 @@
         <meta property="og:image:height" content="262" />
     </head>
 
-    <body>
+    <body id="bodyComingsoon">
         <div class="header">
             <a href="index.html" class="logo">
                 <img src="imgs/vvlogo-05-op.svg" alt="Victoria Vullioud">
@@ -69,7 +69,7 @@
                 <img class="tl second-tl" src="imgs/hero-comingsoon-14-op.svg" alt="">
                 <img class="tr first-tr" src="imgs/hero-comingsoon-15-op.svg" alt="">
                 <img class="tr second-tr" src="imgs/hero-comingsoon-16-op.svg" alt=""> -->
-                <iframe id="leavesDown" class="bl comingsoon-bl" src="imgs/hero-comingsoon-12-op.svg" scrolling="no" alt="Gráfica del hero"></iframe>
+                <img id="leavesDown" class="bl comingsoon-bl" src="imgs/hero-comingsoon-12-op.svg" alt="Gráfica del hero">
             </section> <!-- .index-hero -->
         </main>
 
@@ -85,6 +85,7 @@
             leavesDown.addEventListener("mouseover", 
                                       function(){
                                           leavesDown.classList.add("comingsoonDown");
+                                          bodyComingsoon.classList.add("stop-scrolling");
             });
         </script>
 
