@@ -3,7 +3,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Victoria Vullioud</title>
+        <title>Proyectos - Victoria Vullioud</title>
         <link rel="stylesheet" href="estilos.css">
 
         <link href="imgs/favicon.png" rel="shortcut icon">
@@ -34,7 +34,7 @@
                     <a href="proyectos.html">ES</a>
                 </li>
                 <li>
-                    <a href="proximamente.html">EN</a>
+                    <a lang="en" href="proximamente.html">EN</a>
                 </li>
             </ul>
         </div> <!-- .header -->
@@ -50,23 +50,23 @@
                 </div>
                 <div id="project-hero-menu">
                     <button class="btn active" 
-                            onclick="filterSelection('all')">
+                            onclick="filtro('all')">
                         Todos
                     </button>
                     <button class="btn" 
-                            onclick="filterSelection('editorial')">
+                            onclick="filtro('editorial')">
                         Editorial
                     </button>
                     <button class="btn" 
-                            onclick="filterSelection('illustration')">
+                            onclick="filtro('illustration')">
                         Ilustración
                     </button>
                     <button class="btn" 
-                            onclick="filterSelection('branding')">
+                            onclick="filtro('branding')">
                         Branding
                     </button>
                     <button class="btn" 
-                            onclick="filterSelection('webdesign')">
+                            onclick="filtro('webdesign')">
                         Diseño web
                     </button>
                 </div>
@@ -148,40 +148,30 @@
                     </a>
 
                     <div id="moreProjects" class="hide inside-container">
-                        <a href="proximamente.html" class="grid-medium illustration">
-                                <div class="grid-big-info diversidad">
-                                    <p class="info-blanca">Ilustración</p>
+                        <a href="proximamente.html" class="grid-medium branding webdesign">
+                                <div class="grid-big-info jewish-museum">
+                                    <p class="info-blanca">Branding<br>Diseño web</p>
                                     <div class="grid-info-center">
-                                        <h2 class="info-blanca">Diversidad</h2>
-                                        <p class="info-blanca">2016</p>
+                                        <h2 class="info-blanca">Jewish Museum</h2>
+                                        <p class="info-blanca">2017</p>
                                     </div>
-                                    <p class="info-tematica">AFICHE SOBRE DIVERSIDAD CULTURAL</p>
+                                    <p class="info-tematica">REDISEÑO WEB</p>
                                 </div>
-                                <img src="imgs/home-proyecto-diversidad.jpg" alt="Afiche sobre diversidad">
+                                <img src="imgs/home-proyecto-jewish.jpg" alt="Página del Museo Judío">
                             </a>
         
-                            <a href="proximamente.html" class="grid-medium branding illustration">
-                                <div class="grid-big-info inversion">
-                                    <p class="info-blanca">Branding<br>Ilustración</p>
+                            <a href="proximamente.html" class="grid-medium branding editorial last-project">
+                                <div class="grid-big-info revista-dale">
+                                    <p class="info-blanca">Editorial<br>Branding</p>
                                     <div class="grid-info-center">
-                                        <h2 class="info-blanca">Fondo de inversión</h2>
-                                        <p class="info-blanca">2017</p>
+                                        <h2 class="info-blanca">Revista DALE!</h2>
+                                        <p class="info-blanca">2016</p>
                                     </div>
-                                    <p class="info-tematica">ESTADOS DEL MUNDO</p>
+                                    <p class="info-tematica">REVISTA CULTURAL MENSUAL</p>
                                 </div>
-                                <img src="imgs/home-proyecto-inversion.jpg" alt="Afiche retorico">
+                                <img src="imgs/home-proyecto-dale.jpg" alt="Portada de Dale">
                             </a>
-                            <a href="proximamente.html" class="grid-medium branding illustration">
-                                <div class="grid-big-info inversion">
-                                    <p class="info-blanca">Branding<br>Ilustración</p>
-                                    <div class="grid-info-center">
-                                        <h2 class="info-blanca">Fondo de inversión</h2>
-                                        <p class="info-blanca">2017</p>
-                                    </div>
-                                    <p class="info-tematica">ESTADOS DEL MUNDO</p>
-                                </div>
-                                <img src="imgs/home-proyecto-inversion.jpg" alt="Afiche retorico">
-                            </a>
+
                     </div> <!-- .moreProjects -->
                 </div> <!-- .project-container-grid -->
 
@@ -257,57 +247,28 @@
     </script>
 
     <script>
-        filterSelection("all");
-        //var all = document.getElementsByClassName("all");
+        
+        function filtro(cat){
+            console.log(cat);
 
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("grid-medium");
-            if (c == "all") c = "";
-            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
-        }
+            var items = document.querySelectorAll(".grid-medium");
 
-        // Show filtered elements
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {
-                element.className += " " + arr2[i];
+            console.log(items);
+            for(var i = 0; i < items.length; i++){
+                if(items[i].classList.contains(cat) === true){
+                    console.log("Este si", items[i]);
+                    items[i].classList.remove("hide");
+                    items[i].classList.add("showContainer");
+                } else {
+                    items[i].classList.remove("showContainer");
+                    items[i].classList.add("hide");
                 }
             }
         }
 
-        // Hide elements that are not selected
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                arr1.splice(arr1.indexOf(arr2[i]), 1); 
-                }
-            }
-            element.className = arr1.join(" ");
-        }
+        filtro("grid-medium");
 
 
-        // Add active class to the current control button (highlight it)
-        var btnContainer = document.getElementById("project-hero-menu");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-       
         
     </script>
 

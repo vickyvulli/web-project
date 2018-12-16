@@ -3,7 +3,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Victoria Vullioud</title>
+        <title>Contacto - Victoria Vullioud</title>
         <link rel="stylesheet" href="contacto.css">
         <link rel="stylesheet" href="estilos.css">
 
@@ -36,7 +36,7 @@
                     <a href="contacto.html">ES</a>
                 </li>
                 <li>
-                    <a href="proximamente.html">EN</a>
+                    <a lang="en" href="proximamente.html">EN</a>
                 </li>
             </ul>
         </div> <!-- .header -->
@@ -48,11 +48,14 @@
         <main class="main-contact">
             <section class="hero contact-hero">
                 <div class="contact-hero-form">
-                    <form action="">
+                    <form action="submit.php" method="POST">
                         <div class="contact-form-text">
                             <h1>¡Hola Vicky!</h1>
                             
-                                Te estoy contactando de parte de <input  type="text" placeholder="Empresa/organización" required>, me interesaría poder hablar con vos sobre un proyecto de  
+                                Te estoy contactando de parte de 
+                                <label for="company" class="cloak">Ingresa aquí la empresa u organización donde trabajas</label>
+                                <input id="company" name="company" type="text" placeholder="Empresa/organización" required>
+                                , me interesaría poder hablar con vos sobre un proyecto de  
                                 <div class="cs-select cs-skin-border">
                                     <div class="cs-options">
                                         <ul>
@@ -63,7 +66,8 @@
 
                                         </ul>
                                     </div> <!-- cs-options -->
-                                    <select class="cs-select cs-skin-border" name="área de trabajo" required>
+                                    <label for="work" class="cloak">Elegí el área de trabajo del proyecto</label>
+                                    <select id="work" class="cs-select cs-skin-border" name="project" required>
                                         <option value="editorial">editorial</option>
                                         <option value="ilustration">ilustracion</option>
                                         <option value="branding">branding</option>
@@ -86,7 +90,8 @@
                                             <li data-option data-value="reunion"><span>reunión</span></li>
                                         </ul>
                                     </div> <!-- contact-form-options -->
-                                <select class="cs-select cs-skin-border cs-width" name="forma de contacto" required>
+                                <label for="contacto" class="cloak">Elegí la forma de contacto que prefieras</label>
+                                <select id="contacto" class="cs-select cs-skin-border cs-width" name="contact" required>
                                     <option value="llamada">videollamada</option>
                                     <option value="email">e-mail</option>
                                     <option value="reunion">reunión</option>
@@ -97,21 +102,30 @@
                         <br>
                         <span aria-hidden="true" class="espacio"></span>
 
-                                Saludos,<br><input type="text" placeholder="Nombre" required>.
+                                Saludos,<br>
+                                <label for="name" class="cloak">Ingresa aquí tu nombre</label>
+                                <input id="name" name="name" type="text" placeholder="Nombre" required>.
 
                         </div> <!-- contact-form-text -->
 
 
                         <div class="contact-form-footer">
                             <div class="contact-footer-mail">
-                                <input class="input-email" type="email" placeholder="Email de contacto" autocomplete="off" required>
+                                <label for="email" class="cloak">Ingresa aquí tu email</label>
+                                <input id="email" name="email" class="input-email" type="email" placeholder="Email de contacto" autocomplete="off" required>
                             </div>
                             <div class="contact-footer-sumbit">
-                                <input type="submit" value="Enviar el mensaje">
+                                <input id="btnSubmit" type="submit" value="Enviar el mensaje">
                             </div>
                         </div> <!-- contact-form-footer -->
                     </form>
                 </div> <!-- contact-hero-form -->
+
+
+                <div id="success"></div>
+
+
+                
                 <img class="tl contact-tl" src="imgs/hero-contact-08-op.svg" alt="">
                 <img class="tr contact-tr" src="imgs/hero-contact-09-op.svg" alt="">
                 <img class="bl contact-bl" src="imgs/hero-contact-10-op.svg" alt="">
@@ -133,6 +147,45 @@
             new SelectFx(el);
         } );
     })();
+</script>
+<script>
+            function llamar(){
+				// Genero un nuevo request
+	            var x = new XMLHttpRequest();
+	
+                // Cuando se empieza a solicitar el archivo
+                x.onreadystatechange = function (){
+                
+                    if(
+                        x.status     === 200
+                        &&
+                        x.readyState === 4
+                    ) {
+                        
+                        console.log("TODO OK");
+                        // Muestro el contenido 
+                        // done.innerHTML = x.responseText;
+                        
+                    } else {
+                        console.error("Nope");
+                        console.log("Status:", x.status);
+                        console.log("State:",  x.readyState);
+                    }
+                    
+                    
+                    
+                } // Cierra función sin nombre
+	
+                //    Método,     URL      , asincrónico
+                x.open('POST', 'php/submit.php', true);
+                x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+                x.send();
+				
+			} // Cierra función llamar()
+			
+			
+			// llamar();
+            btnSubmit.addEventListener("click", llamar);
 </script>
     </body>
 

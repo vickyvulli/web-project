@@ -285,6 +285,7 @@ main{
     width: 55.25%;
     margin: 17% auto;
     align-self: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
 }
 .skills-info{
     width: 45%;
@@ -705,7 +706,16 @@ footer{
     display: block;
     margin-bottom: 2%;
   }
-
+.cloak{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
 
 
 /* 
@@ -809,18 +819,11 @@ footer{
     z-index: 10;
 }
 
-.hide{
-    display: none;
-}
-.show{
-    display: block;
-}
-.showContainer{
-    display: flex;
-}
+
 .inside-container{
     width: 100%;
-    justify-content: space-between;
+    justify-content: right;
+    /* justify-content: space-between; */
 }
 .project-graphic{
     width: 20%;
@@ -847,14 +850,16 @@ footer{
     margin-bottom: 5%;
     display: flex;
     align-items: baseline;
-    /* display: none; */
+    display: none;
 }
 .grid-medium img{
     width: 100%;
     top: 0;
     left: 0;
 }
-
+.last-project{
+    margin-left: 5%;
+}
 .diversidad{
     background-color: #a984b7;
 }
@@ -864,8 +869,22 @@ footer{
 .cartografia{
     background-color: #e56061;
 }
+.jewish-museum{
+    background-color: #f2a781;
+}
+.revista-dale{
+    background-color: #ff00ff;
+}
 
-
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.showContainer{
+    display: flex;
+}
 
 /* 
     ------------------------

@@ -3,7 +3,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Victoria Vullioud</title>
+        <title>Próximamente - Victoria Vullioud</title>
         <link rel="stylesheet" href="estilos.css">
 
 
@@ -32,10 +32,10 @@
             </a>
             <ul class="lang">
                 <li>
-                    <a href="">ES</a>
+                    <a href="proximamente.html">ES</a>
                 </li>
                 <li>
-                    <a href="">EN</a>
+                    <a lang="en" href="proximamente.html">EN</a>
                 </li>
             </ul>
         </div> <!-- .header -->
@@ -51,15 +51,18 @@
                     <div class="comingsoon-form-text">
                         <h1>¡Próximamente!</h1>
                         
-                        <p>Esta página está en proceso, podes volver a visitarla en unas semanas o ser de los primeros en enterarte suscribiendote aquí.</p> 
+                        <p id="message">Esta página está en proceso, podes volver a visitarla en unas semanas o ser de los primeros en enterarte suscribiendote aquí.</p>
+                        <p id="done"></p> 
                     </div>
-                    <form action="">
+                    <form id="subscribeForm"  action="php/subscribe.php" method="POST">
                         <div class="contact-form-footer comingsoon-footer">
                             <div class="contact-footer-mail suscribe">
-                                <input class="input-email" type="email" placeholder="Email de contacto" autocomplete="off" required>
+                                <label for="email" class="cloak">Email</label>
+                                <input id="email" class="input-email" type="email" name="email" placeholder="Email de contacto" autocomplete="off" required>
+
                             </div>
                             <div class="contact-footer-sumbit suscribe suscribe-footer-submit">
-                                <input type="submit" value="Suscribirme">
+                                <input id="btnSubscribe" type="button" value="Suscribirme">
                             </div>
                         </div> <!-- contact-form-footer -->
                     </form>
@@ -87,6 +90,45 @@
                                           leavesDown.classList.add("comingsoonDown");
                                           bodyComingsoon.classList.add("stop-scrolling");
             });
+        </script>
+        <script>
+
+            function submit(){
+                var email = document.getElementById('email');
+
+                var x = new XMLHttpRequest();
+        
+
+                x.onreadystatechange = function (){  
+                    if(
+                        x.status     === 200
+                        &&
+                        x.readyState === 4
+                    ) {
+                        console.log("TODO OK");
+                        // Muestro el contenido 
+                        done.innerHTML = x.responseText;
+                        message.classList.add('hide');
+                        
+                    } else {
+                        console.error("Nope");
+                        console.log("Status:", x.status);
+                        console.log("State:",  x.readyState);
+                    }
+                    
+                } // Cierra función sin nombre
+
+                x.open('POST', 'php/subscribe.php', true);
+                x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+                x.send();
+
+
+            }
+                
+	            
+            btnSubscribe.addEventListener("click", submit);
+		
+
         </script>
 
 
