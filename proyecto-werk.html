@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="estilos.css">
         <link href="imgs/favicon.png" rel="shortcut icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <link rel="stylesheet" href="swiper/css/swiper.min.css">
+        <link rel="stylesheet" href="swiper/css/swiper.css">
     </head>
 
     <body>
@@ -62,9 +62,16 @@
 
                 <section class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">
+                            <div class="indication-swiper"><p>Deslizar </p><i class="fas fa-arrow-right arrow-swiper"></i></div>
+                            <img src="imgs/projects/proyecto-werk-07.jpg" alt="Colores del proyecto">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/projects/proyecto-werk-08.jpg" alt="Concepto del proyecto">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/projects/proyecto-werk-09.jpg" alt="Gigantografía">
+                        </div>
                         ...
                     </div>
 
@@ -74,17 +81,20 @@
                     <div class="werk-content-01">
                         <img class="werk-content-logo" src="imgs/projects/proyecto-werk-01-op.svg" alt="Werk logo">
                         <img class="werk-content-poster" src="imgs/projects/proyecto-werk-03--op.jpg" alt="Afiche institucional">
+                        <p>Las composiciones fueron realizadas a mano, recortando papeles para armar los collages y luego dibujandoles por encima los detalles.</p>
                     </div>
                     <div class="werk-content-02">
-                        <img src="imgs/projects/proyecto-werk-05.jpg" alt="Cartelera">
+                        <img class="floatCenter" src="imgs/projects/proyecto-werk-05.jpg" alt="Cartelera">
                     </div>
                     <div class="werk-content-03">
-                        <img src="" alt="Desplegable frente">
-                        <img src="" alt="Desplegable dorso">
+                        <p>Desplegable institucional y programático /</p>
+                        <!-- <img src="imgs/projects/proyecto-werk-06.png" alt="Desplegable frente y dorso"> -->
 
                     </div>
                     
-                    <div class="werk-content-04"></div>
+                    <div class="werk-content-04">
+                        <p>Piezas de promoción</p>
+                    </div>
                     
                     <a class="project-behance-link" href="https://www.behance.net/gallery/67673709/WERK-Festival-de-Mujeres-del-POP">Miralo completo en mi Behance</a>
 
@@ -145,12 +155,8 @@
                     
             </div>  <!-- .contact-nav -->
 
-            <!-- <svg class="footer-svg" width="100vw" height="5vh">
-                <rect width="100vw" height="5vh"
-                style="fill:var(--naranja);" />
-            </svg> -->
             <script src="js/skrollr.min.js"></script>
-            <script type="text/javascript">
+            <script>
                 skrollr.init();
             </script>
             <script src="swiper/js/swiper.min.js"></script>
@@ -159,8 +165,31 @@
                       // Optional parameters
                       direction: 'horizontal',
                       freeMode: 'true',
-                    })
-                    </script>
+                      slidesPerView: 1.05,
+                      grabCursor: true
+                      
+                    });
+                    mySwiper.on('touchMove', function () {
+                        var arrow = document.querySelector('.indication-swiper');
+                        arrow.classList.add("hideAnimated");
+                    });
+
+            </script>
+            <script>
+                var obj = document.querySelector('.floatCenter')
+    
+                function parallax() {
+                    var yPos = 0 - window.pageYOffset/6;	
+                    obj.style.top = 430 + yPos + "%";
+                }
+
+                window.addEventListener("scroll",parallax);
+
+
+
+
+
+            </script>
     </body>
 
 

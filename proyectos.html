@@ -49,7 +49,7 @@
                     <hr>
                 </div>
                 <div id="project-hero-menu">
-                    <button class="btn active" 
+                    <button class="btn active allBtn" 
                             onclick="filtro('all')">
                         Todos
                     </button>
@@ -147,32 +147,34 @@
                         <img src="imgs/home-proyecto-cartografia.jpg" alt="Cartografía">
                     </a>
 
-                    <div id="moreProjects" class="hide inside-container">
-                        <a href="proximamente.html" class="grid-medium branding webdesign">
-                                <div class="grid-big-info jewish-museum">
-                                    <p class="info-blanca">Branding<br>Diseño web</p>
-                                    <div class="grid-info-center">
-                                        <h2 class="info-blanca">Jewish Museum</h2>
-                                        <p class="info-blanca">2017</p>
-                                    </div>
-                                    <p class="info-tematica">REDISEÑO WEB</p>
-                                </div>
-                                <img src="imgs/home-proyecto-jewish.jpg" alt="Página del Museo Judío">
-                            </a>
-        
-                            <a href="proximamente.html" class="grid-medium branding editorial last-project">
-                                <div class="grid-big-info revista-dale">
-                                    <p class="info-blanca">Editorial<br>Branding</p>
-                                    <div class="grid-info-center">
-                                        <h2 class="info-blanca">Revista DALE!</h2>
-                                        <p class="info-blanca">2016</p>
-                                    </div>
-                                    <p class="info-tematica">REVISTA CULTURAL MENSUAL</p>
-                                </div>
-                                <img src="imgs/home-proyecto-dale.jpg" alt="Portada de Dale">
-                            </a>
+                    <a href="proximamente.html" class="grid-medium branding webdesign moreProjects last-project">
+                        <div class="grid-big-info jewish-museum">
+                            <p class="info-blanca">Branding<br>Diseño web</p>
+                            <div class="grid-info-center">
+                                <h2 class="info-blanca">Jewish Museum</h2>
+                                <p class="info-blanca">2017</p>
+                            </div>
+                            <p class="info-tematica">REDISEÑO WEB</p>
+                        </div>
+                        <img src="imgs/home-proyecto-jewish.jpg" alt="Página del Museo Judío">
+                    </a>
 
-                    </div> <!-- .moreProjects -->
+                    <a href="proximamente.html" class="grid-medium branding editorial moreProjects last-project">
+                        <div class="grid-big-info revista-dale">
+                            <p class="info-blanca">Editorial<br>Branding</p>
+                            <div class="grid-info-center">
+                                <h2 class="info-blanca">Revista DALE!</h2>
+                                <p class="info-blanca">2016</p>
+                            </div>
+                            <p class="info-tematica">REVISTA CULTURAL MENSUAL</p>
+                        </div>
+                        <img src="imgs/home-proyecto-dale.jpg" alt="Portada de Dale">
+                    </a>
+                    
+                    <div class="grid-medium editorial branding webdesign neverShow">
+
+                    </div>
+
                 </div> <!-- .project-container-grid -->
 
 
@@ -239,10 +241,16 @@
     </script>
 
     <script>
-        viewMore.addEventListener("click", 
-                                  function(){
-                                      moreProjects.classList.add("showContainer");
-                                      viewMore.classList.add("hide");
+        viewMore.addEventListener("click", function(){
+            var hiddenProjects = document.querySelectorAll(".moreProjects");
+            
+            for(var i = 0; i < hiddenProjects.length; i++){
+                if(hiddenProjects[i].classList.contains('last-project') === true){
+                    hiddenProjects[i].classList.remove("last-project");
+                    viewMore.classList.add("hide");
+                }
+
+            };
         });
     </script>
 
@@ -265,9 +273,36 @@
                 }
             }
         }
+        var btnContainer = document.getElementById("project-hero-menu");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
 
         filtro("grid-medium");
+        
+        var itemsAll = document.querySelectorAll(".grid-medium");
+        var showAll = document.querySelector(".allBtn");
 
+        showAll.addEventListener("click", function(){
+            var items = document.querySelectorAll(".grid-medium");
+            for(i = 0; i < itemsAll.length; i++){
+                if(items[i].classList.contains('hide') === true){
+                    items[i].classList.remove("hide");
+                    items[i].classList.add("showContainer");
+                }
+            
+                
+
+            };
+        });
+        
+        
+        
 
         
     </script>
