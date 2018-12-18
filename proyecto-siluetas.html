@@ -61,20 +61,28 @@
 
                 <section class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        ...
+                        <div class="swiper-slide">
+                            <div class="indication-swiper"><p>Deslizar </p><i class="fas fa-arrow-right arrow-swiper"></i></div>
+                            <img src="imgs/projects/proyecto-siluetas-01.jpg" alt="Pauta del proyecto">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/projects/proyecto-siluetas-02.jpg" alt="Colores del proyecto">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/projects/proyecto-siluetas-03.jpg" alt="Gráfica del proyecto">
+                        </div>
+                        
                     </div>
 
                 </section> <!-- .swiper container -->
                 
                 <section class="project-content-container">
                     <div class="siluetas-content-01">
-                        <img src="" alt="Tapa del libro">
+                        
+                        <p>Las composiciones fueron realizadas a mano, recortando papeles para armar los collages y luego dibujandoles por encima los detalles.</p>
                     </div>
                     <div class="siluetas-content-02">
-                        <img src="" alt="Dobles páginas">
+                        
                     </div>
                     <div class="siluetas-content-03">
                         <h4>DETALLES</h4>
@@ -156,7 +164,7 @@
                 style="fill:var(--naranja);" />
             </svg> -->
             <script src="js/skrollr.min.js"></script>
-            <script type="text/javascript">
+            <script>
                 skrollr.init();
             </script>
             <script src="swiper/js/swiper.min.js"></script>
@@ -165,7 +173,14 @@
                     // Optional parameters
                     direction: 'horizontal',
                     freeMode: 'true',
-                })
+                    slidesPerView: 1.05,
+                    grabCursor: true
+                      
+                });
+                mySwiper.on('touchMove', function () {
+                    var arrow = document.querySelector('.indication-swiper');
+                    arrow.classList.add("hideAnimated");
+                });
             </script>
     </body>
 
