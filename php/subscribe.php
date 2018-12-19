@@ -11,10 +11,7 @@
 
       } else {
             // check if e-mail address is well-formed
-            if ($email) {
-            $emailErr = "El email ingresado no es valido"; 
-            echo $emailErr;
-            } else {
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 // 2. Genero la query
                 $insertar = "INSERT INTO email
                 VALUES(
@@ -27,12 +24,14 @@
 
                 // 4. Preguntamos si funcionó
                 if($ej === true){
-                    echo "¡Muchas gracias por suscribirte, vas a ser de los primeros en enterarte!" . $email;
-                    //echo filter_var($email, FILTER_VALIDATE_EMAIL);
+                    echo "¡Muchas gracias por suscribirte, vas a ser de los primeros en enterarte!";
 
                 } else {
-                    echo "Falló la suscripción, por favor escribime a vv.works@gmail.com";
+                    echo "Falló la suscripción, por favor escribime a vvullioud.works@gmail.com";
                 }
+            } else {
+                $emailErr = "El email ". $email ." no es valido"; 
+                echo $emailErr;
             }
       } // Cierra else de validación
 
