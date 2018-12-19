@@ -48,7 +48,7 @@
         <main class="main-contact">
             <section class="hero contact-hero">
                 <div class="contact-hero-form">
-                    <form action="submit.php" method="POST">
+                    <form id="submitForm">
                         <div class="contact-form-text">
                             <h1>¡Hola Vicky!</h1>
                             
@@ -57,7 +57,7 @@
                                 <input id="company" name="company" type="text" placeholder="Empresa/organización" required>
                                 , me interesaría poder hablar con vos sobre un proyecto de  
                                 <div class="cs-select cs-skin-border">
-                                    <div class="cs-options">
+                                    <div class="cs-options" tabindex="0">
                                         <ul>
                                             <li data-option data-value="editorial"><span>editorial</span></li>
                                             <li data-option data-value="ilustration"><span>ilustración</span></li>
@@ -83,7 +83,7 @@
                             
                             Quisiera arreglar una 
                                 <div class="cs-select cs-skin-border">
-                                    <div class="cs-options">
+                                    <div class="cs-options" tabindex="0">
                                         <ul>
                                             <li data-option data-value="llamada"><span>llamada</span></li>
                                             <li data-option data-value="email"><span>e-mail</span></li>
@@ -126,10 +126,10 @@
 
 
                 
-                <img class="tl contact-tl" src="imgs/hero-contact-08-op.svg" alt="">
-                <img class="tr contact-tr" src="imgs/hero-contact-09-op.svg" alt="">
-                <img class="bl contact-bl" src="imgs/hero-contact-10-op.svg" alt="">
-                <img class="br contact-br" src="imgs/hero-contact-11-op.svg" alt="">
+                <img class="tl contact-tl" src="imgs/hero-contact-08-op.svg" alt="Gráfica de hojas">
+                <img class="tr contact-tr" src="imgs/hero-contact-09-op.svg" alt="Gráfica de hojas">
+                <img class="bl contact-bl" src="imgs/hero-contact-10-op.svg" alt="Gráfica de hojas">
+                <img class="br contact-br" src="imgs/hero-contact-11-op.svg" alt="Gráfica de hojas">
             </section> <!-- .index-hero -->
         </main>
 
@@ -142,13 +142,91 @@
 <script src="js/classie.js"></script>
 <script src="js/selectFx.js"></script>
 <script>
-    (function() {
+    /* (function() {
         [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
             new SelectFx(el);
         } );
+    })(); */
+
+
+
+
+    (function() {
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) { 
+            new SelectFx(el);
+        } );
+ 
+ 
+        [].slice.call( document.querySelectorAll( 'div.cs-select' ) ).forEach( function(el) {
+        
+        // https://www.darrenlester.com/blog/focus-only-on-tab
+        
+        let mouseDown = false;
+
+        el.addEventListener('mousedown', () => {
+            mouseDown = true;
+        });
+
+        el.addEventListener('mouseup', () => {
+            mouseDown = false;
+        });
+        
+        el.addEventListener("focus", function (event){
+        //console.log("Fue mouse", mouseDown);
+        if(!mouseDown){
+            event.target.classList.add("cs-active");
+        }
+        });
+        
+        el.addEventListener("blur", function (event){
+        //console.log("Fue mouse", mouseDown);
+        if(!mouseDown){
+            event.target.classList.remove("cs-active");
+        }
+        });
+        });
+ 
+ 
     })();
 </script>
 <script>
+            window.addEventListener("load", function () {
+                function sendData() {
+                    var XHR = new XMLHttpRequest();
+
+                    // Bind the FormData object and the form element
+                    var FD = new FormData(form);
+
+                    // Define what happens on successful data submission
+                    XHR.addEventListener("load", function(event) {
+                    alert(event.target.responseText);
+                    });
+
+                    // Define what happens in case of error
+                    XHR.addEventListener("error", function(event) {
+                    alert('Oops! Algo esta fallando :( por favor escribime a vvvullioud.works@gmail.com');
+                    });
+
+                    // Set up our request
+                    XHR.open("POST", "php/submit.php", true);
+
+                    // The data sent is what the user provided in the form
+                    XHR.send(FD);
+                }
+                
+                // Access the form element...
+                var form = document.getElementById("submitForm");
+
+                // ...and take over its submit event.
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    sendData();
+                });
+            });
+            
+            
+/*
             function llamar(){
 				// Genero un nuevo request
 	            var x = new XMLHttpRequest();
@@ -186,6 +264,8 @@
 			
 			// llamar();
             btnSubmit.addEventListener("click", llamar);
+
+*/
 </script>
     </body>
 

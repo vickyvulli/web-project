@@ -3,7 +3,6 @@
     $email = $_POST['email'];
 
     include("conexion.php");
-//    include("suscribe-response.php");
 
 
 
@@ -42,6 +41,35 @@
                         // 4. Preguntamos si funcionó
                         if($ej === true){
                             echo "¡Muchas gracias por suscribirte, vas a ser de los primeros en enterarte!";
+                            
+                            //include("suscribe-response.php");
+                            	// Uno o varios mails entre " y separados con ,
+                            $destino = "vvullioud.works@gmail.com,
+                            vicky.vullioud@gmail.com";
+                            
+                            
+                            $cuerpo = "$email se han suscrito a tu newsletter";
+
+                            /*
+                            1. Destinatario
+                            2. Asunto del mail
+                            3. Cuerpo del mail
+                            4. Headers (opcional)
+                            */
+                            mail(
+                            $destino,
+                            "Mail desde vv-works",
+                            $cuerpo
+                            );
+
+                            $cabeceras = 'From: Mensajes y avisos <vvullioud.works@gmail.com>';
+
+                            mail(
+                            $email,
+                            "Suscripción a vv-works",
+                            "Muchas gracias por suscribirte, dentro de poco vas a recibir novedades.",
+                            $cabeceras
+                            );
 
                         } else {
                             echo "Falló la suscripción, por favor escribime a vvullioud.works@gmail.com";
