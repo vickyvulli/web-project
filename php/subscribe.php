@@ -3,6 +3,8 @@
     $email = $_POST['email'];
 
     include("conexion.php");
+//    include("suscribe-response.php");
+
 
 
       if (empty($email) === true) {
@@ -12,28 +14,50 @@
       } else {
             // check if e-mail address is well-formed
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                // 2. Genero la query
-                $insertar = "INSERT INTO email
-                VALUES(
-                    NULL,
-                    '$email'
-                )";
 
-                // 3. Ejecutamos la query
-                $ej = mysqli_query($conexion, $insertar);
+                $existe = "SELECT * FROM email
+                           WHERE email LIKE '$email'
+                ";
 
-                // 4. Preguntamos si funcionó
-                if($ej === true){
-                    echo "¡Muchas gracias por suscribirte, vas a ser de los primeros en enterarte!";
+                $ej1 = mysqli_query($conexion, $existe);
 
+                if ($ej1 === false) {
+                    echo "Error en la base de datos";
                 } else {
-                    echo "Falló la suscripción, por favor escribime a vvullioud.works@gmail.com";
-                }
+
+                    $cant = mysqli_num_rows($ej1);
+                    // echo "Tenes $cant resultados.";
+                    if($cant === 0){
+                        
+                        // 2. Genero la query
+                        $insertar = "INSERT INTO email
+                        VALUES(
+                            NULL,
+                            '$email'
+                        )";
+
+                        // 3. Ejecutamos la query
+                        $ej = mysqli_query($conexion, $insertar);
+
+                        // 4. Preguntamos si funcionó
+                        if($ej === true){
+                            echo "¡Muchas gracias por suscribirte, vas a ser de los primeros en enterarte!";
+
+                        } else {
+                            echo "Falló la suscripción, por favor escribime a vvullioud.works@gmail.com";
+                        }
+                    } else {
+                        echo "El email ingresado ya se encuentra en la base de datos";
+
+                    } 
+
+
+                } 
             } else {
                 $emailErr = "El email ". $email ." no es valido"; 
                 echo $emailErr;
             }
-      } // Cierra else de validación
+        }// Cierra else de validación
 
     
 /*    

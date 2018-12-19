@@ -62,7 +62,7 @@
 
                             </div>
                             <div class="contact-footer-sumbit suscribe suscribe-footer-submit">
-                                <input id="btnSubscribe" type="submit" value="Suscribirme">
+                                <input type="submit" value="Suscribirme">
                             </div>
                         </div> <!-- contact-form-footer -->
                     </form>
@@ -92,40 +92,40 @@
             });
         </script>
         <script>
-window.addEventListener("load", function () {
-  function sendData() {
-    var XHR = new XMLHttpRequest();
+            window.addEventListener("load", function () {
+                function sendData() {
+                    var XHR = new XMLHttpRequest();
 
-    // Bind the FormData object and the form element
-    var FD = new FormData(form);
+                    // Bind the FormData object and the form element
+                    var FD = new FormData(form);
 
-    // Define what happens on successful data submission
-    XHR.addEventListener("load", function(event) {
-      alert(event.target.responseText);
-    });
+                    // Define what happens on successful data submission
+                    XHR.addEventListener("load", function(event) {
+                    alert(event.target.responseText);
+                    });
 
-    // Define what happens in case of error
-    XHR.addEventListener("error", function(event) {
-      alert('Oops! Algo esta fallando :( por favor escribime a vv.works@gmail.com');
-    });
+                    // Define what happens in case of error
+                    XHR.addEventListener("error", function(event) {
+                    alert('Oops! Algo esta fallando :( por favor escribime a vvvullioud.works@gmail.com');
+                    });
 
-    // Set up our request
-    XHR.open("POST", "php/subscribe.php");
+                    // Set up our request
+                    XHR.open("POST", "php/subscribe.php", true);
 
-    // The data sent is what the user provided in the form
-    XHR.send(FD);
-  }
- 
-  // Access the form element...
-  var form = document.getElementById("subscribeForm");
+                    // The data sent is what the user provided in the form
+                    XHR.send(FD);
+                }
+                
+                // Access the form element...
+                var form = document.getElementById("subscribeForm");
 
-  // ...and take over its submit event.
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+                // ...and take over its submit event.
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
 
-    sendData();
-  });
-});
+                    sendData();
+                });
+            });
 
 
 

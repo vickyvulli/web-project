@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 16, 2018 at 03:48 PM
+-- Generation Time: Dec 19, 2018 at 02:21 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -30,17 +30,8 @@ CREATE TABLE `email` (
 --
 
 INSERT INTO `email` (`id_email`, `email`) VALUES
-(41, 'x'),
-(42, 'd'),
-(43, 'd'),
-(44, 'xx'),
-(45, ''),
-(46, ''),
-(47, ''),
-(48, ''),
-(49, ''),
-(50, ''),
-(51, '');
+(1, 'vvullioud.works@gmail.com'),
+(2, 'vicky.vullioud@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -80,4 +71,4 @@ ALTER TABLE `information`
 -- AUTO_INCREMENT for table `email`
 --
 ALTER TABLE `email`
-  MODIFY `id_email` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id_email` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
