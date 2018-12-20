@@ -52,7 +52,7 @@
                         <h1>¡Próximamente!</h1>
                         
                         <p id="message">Esta página está en proceso, podes volver a visitarla en unas semanas o ser de los primeros en enterarte suscribiendote aquí.</p>
-                        <p id="done"></p> 
+                        
                     </div>
                     <form id="subscribeForm">
                         <div class="contact-form-footer comingsoon-footer">
@@ -73,6 +73,12 @@
                 <img class="tr first-tr" src="imgs/hero-comingsoon-15-op.svg" alt="">
                 <img class="tr second-tr" src="imgs/hero-comingsoon-16-op.svg" alt=""> -->
                 <img id="leavesDown" class="bl comingsoon-bl" src="imgs/hero-comingsoon-12-op.svg" alt="Gráfica del hero">
+                <div id="done" class="hide">
+                        <div id="messagePopup">
+                            <p id="messageDone"></p>
+                            <button id="closePopup">Cerrar</button>
+                        </div>
+                </div> 
             </section> <!-- .index-hero -->
         </main>
 
@@ -101,12 +107,23 @@
 
                     // Define what happens on successful data submission
                     XHR.addEventListener("load", function(event) {
-                    alert(event.target.responseText);
+                        //alert(event.target.responseText);
+                        done.classList.remove('hide');
+                        done.classList.remove('hidePopup');
+                        done.classList.add('showContainer');
+                        messagePopup.classList.add('popup');
+                        messageDone.innerHTML = XHR.responseText;
+
+                        closePopup.addEventListener("click", function(){
+                            done.classList.remove('showContainer');
+                            done.classList.add('hidePopup');
+                            messagePopup.classList.remove('popup');
+                        });
                     });
 
                     // Define what happens in case of error
                     XHR.addEventListener("error", function(event) {
-                    alert('Oops! Algo esta fallando :( por favor escribime a vvvullioud.works@gmail.com');
+                        alert('Oops! Algo esta fallando :( por favor escribime a vvvullioud.works@gmail.com');
                     });
 
                     // Set up our request
