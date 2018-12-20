@@ -121,15 +121,18 @@
                     </form>
                 </div> <!-- contact-hero-form -->
 
-
-                <div id="success"></div>
-
-
                 
                 <img class="tl contact-tl" src="imgs/hero-contact-08-op.svg" alt="Gráfica de hojas">
                 <img class="tr contact-tr" src="imgs/hero-contact-09-op.svg" alt="Gráfica de hojas">
                 <img class="bl contact-bl" src="imgs/hero-contact-10-op.svg" alt="Gráfica de hojas">
                 <img class="br contact-br" src="imgs/hero-contact-11-op.svg" alt="Gráfica de hojas">
+
+                <div id="done" class="hide">
+                        <div id="messagePopup">
+                            <p id="messageDone"></p>
+                            <button id="closePopup">Cerrar</button>
+                        </div>
+                </div> 
             </section> <!-- .index-hero -->
         </main>
 
@@ -199,7 +202,18 @@
 
                     // Define what happens on successful data submission
                     XHR.addEventListener("load", function(event) {
-                    alert(event.target.responseText);
+                        //alert(event.target.responseText);
+                        done.classList.remove('hide');
+                        done.classList.remove('hidePopup');
+                        done.classList.add('showContainer');
+                        messagePopup.classList.add('popup');
+                        messageDone.innerHTML = XHR.responseText;
+
+                        closePopup.addEventListener("click", function(){
+                            done.classList.remove('showContainer');
+                            done.classList.add('hidePopup');
+                            messagePopup.classList.remove('popup');
+                        });
                     });
 
                     // Define what happens in case of error
