@@ -1273,12 +1273,14 @@ footer{
     margin: 0 auto;
     display: block;
     margin-bottom: 15%;
+    visibility: hidden;
 }
 .werk-content-poster{
     width: 40%;
     z-index: 100;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
     margin-left: 5%;
+    visibility: hidden;
 }
 .werk-content-01 p{
     font-weight: 600;
@@ -1288,14 +1290,15 @@ footer{
     position: absolute;
     right: 8.5%;
     bottom: 0;
+    visibility: hidden;
+
 }
 
 .werk-content-02{
     width: 100%;
-    height: 145vh;
     background-image: url(imgs/projects/proyecto-werk-04-op.jpg);
     background-repeat: no-repeat;
-    /* padding: 10% 0; */
+    padding: 10% 0;
     display: flex;
     position: relative;
     justify-content: center;
@@ -1305,8 +1308,10 @@ footer{
     width: 70%;
     margin: 0 auto;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
+    align-self: baseline;
+    visibility: hidden;
 }
-.floatCenter{
+.parallax{
     position: absolute;
     top: 10%;
 
@@ -1385,13 +1390,18 @@ footer{
     background-color: #42819c;
     width: 100%;
     overflow: hidden;
-    height: 135vh;
     position: relative;
-    background-image: url(imgs/projects/proyecto-siluetas-04.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% -660%;
-    
+    justify-content: center;
+    display: flex;
+    padding-top: 12%;
+    padding-bottom: 20%;
+}
+.siluetas-content-01 img{
+    width: 55%;
+    align-self: baseline;
+    visibility: hidden;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
+
 }
 .siluetas-content-01 p{
     font-weight: 600;
@@ -1402,6 +1412,7 @@ footer{
     right: 14%;
     bottom: 8%;
     color: var(--blanco);
+    visibility: hidden;
 }
 .siluetas-content-02{
     width: 100%;
@@ -1472,7 +1483,7 @@ footer{
 }
 .hidePopup{
     display: flex;
-    animation: hidePopup 0.75s;
+    animation: hidePopup 0.85s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
     transform-origin: center;
@@ -1492,3 +1503,28 @@ footer{
         z-index: -10;
     }
 }
+.slideInUp {
+    animation: slideInUp 1s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+    
+
+  }
+
+@keyframes slideInUp {
+    from {
+      transform: translateY(30%);
+      opacity: 0;
+      visibility: visible;
+     
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+
+    }
+  }
+
+  

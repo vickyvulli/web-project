@@ -8,6 +8,20 @@
         <link href="imgs/favicon.png" rel="shortcut icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="swiper/css/swiper.css">
+
+        <meta name="keywords" content="victoria, vullioud, diseñadora gráfica, proyecto, werk, festival, mujeres, pop">
+        <meta name="author" content="Victoria Vullioud">
+        <meta name="description" content="Proyecto / tesis realizado durante la cursada en FADU, UBA.">
+        
+        <meta name="robots" content="noindex, nofollow">
+
+        <meta property="og:title" content="Victoria Vullioud - Werk">
+        <meta property="og:description" content="Festival de mujeres del POP" />
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://vv-works.netlify.com/proyecto-werk.html">
+        <meta property="og:image" content="imgs/og-werk-06.png">
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="262" />
     </head>
 
     <body>
@@ -39,17 +53,18 @@
                 <section class="project-description">
                     <div class="project-description-left">
                         <ul class="project-descrip-list">
-                            <li class="project-list-category">CATEGORÍA</li>
+                            <li class="project-list-category">CATEGORÍA
                                 <ul>
                                     <li>Branding</li>
                                     <li>Editorial</li>
                                     <li>Diseño web</li>
                                 </ul>
                             </li>
-                            <li class="project-list-category category-year">AÑO</li>
+                            <li class="project-list-category category-year">AÑO
                                 <ul>
                                     <li>2017</li>
                                 </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="project-description-right">
@@ -58,35 +73,53 @@
                         <p>El trabajo comprende cuatro etapas, a través de las cuales se produce la apertura del sistema gráfico.</p> 
                                 
                     </div>
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="indication-swiper"><p>Deslizar </p><i class="fas fa-arrow-right arrow-swiper"></i></div>
+                                <img src="imgs/projects/proyecto-werk-07.jpg" alt="Colores del proyecto">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/projects/proyecto-werk-08.jpg" alt="Concepto del proyecto">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/projects/proyecto-werk-09.jpg" alt="Gigantografía">
+                            </div>
+                            
+                        </div>
+
+                    </div> <!-- .swiper container -->
+
                 </section> <!-- .project-description -->
-
-                <section class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="indication-swiper"><p>Deslizar </p><i class="fas fa-arrow-right arrow-swiper"></i></div>
-                            <img src="imgs/projects/proyecto-werk-07.jpg" alt="Colores del proyecto">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="imgs/projects/proyecto-werk-08.jpg" alt="Concepto del proyecto">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="imgs/projects/proyecto-werk-09.jpg" alt="Gigantografía">
-                        </div>
-                        
-                    </div>
-
-                </section> <!-- .swiper container -->
                 
                 <section class="project-content-container">
                     <div class="werk-content-01">
-                        <img class="werk-content-logo" src="imgs/projects/proyecto-werk-01-op.svg" alt="Werk logo">
-                        <img class="werk-content-poster" src="imgs/projects/proyecto-werk-03--op.jpg" alt="Afiche institucional">
-                        <p>Las composiciones fueron realizadas digitalmente, editando las imagenes para componerlas en collages.</p>
+                        <div>
+                                <img class="werk-content-logo slideInUp"
+                                src="imgs/projects/proyecto-werk-01-op.svg" 
+                                alt="Werk logo"
+                                data-700-bottom="animation-play-state: paused;"
+                                data-bottom-top="animation-play-state: running;"
+                                >
+                        </div>
+                        
+                        <img class="werk-content-poster slideInUp"
+                             src="imgs/projects/proyecto-werk-03--op.jpg" alt="Afiche institucional"
+                             data-900-bottom="animation-play-state: paused;"
+                             data-bottom-top="animation-play-state: running;">
+                        <p class="slideInUp"
+                            data-700-bottom="animation-play-state: paused;"
+                            data-bottom-top="animation-play-state: running;"
+                        >Las composiciones fueron realizadas digitalmente, editando las imagenes para componerlas en collages.</p>
                     </div>
                     <div class="werk-content-02">
-                        <img class="floatCenter" src="imgs/projects/proyecto-werk-05.jpg" alt="Cartelera">
+                        <img class="slideInUp"
+                            data-2000-bottom="animation-play-state: paused;"
+                            data-bottom-top="animation-play-state: running;"          
+                             src="imgs/projects/proyecto-werk-05.jpg" alt="Cartelera">
                     </div>
-                    <div class="werk-content-03">
+                    <div class="werk-content-03 parallaxSmall">
                         <p>Desplegable institucional y programático /</p>
                         <!-- <img src="imgs/projects/proyecto-werk-06.png" alt="Desplegable frente y dorso"> -->
 
@@ -165,7 +198,7 @@
                       // Optional parameters
                       direction: 'horizontal',
                       freeMode: 'true',
-                      slidesPerView: 1.05,
+                      slidesPerView: 'auto',
                       grabCursor: true
                       
                     });
@@ -176,7 +209,11 @@
 
             </script>
             <script>
-                var obj = document.querySelector('.floatCenter')
+                /*
+                EFECTO PARALLAX DE LA CARTELERA
+                */
+                /*
+                var obj = document.querySelector('.parallax');
     
                 function parallax() {
                     var yPos = 0 - window.pageYOffset/6;	
@@ -185,10 +222,27 @@
 
                 window.addEventListener("scroll",parallax);
 
+                */
 
+                /*
+                EFECTO PARALLAX DEL DESPLEGABLE
+                */
 
+                var elem= document.querySelector(".parallaxSmall");
 
+                window.addEventListener("scroll", function() {
 
+                    var scrolledHeight= window.pageYOffset,
+                        limit= elem.offsetTop + elem.offsetHeight;
+                                    
+                    if(scrolledHeight > elem.offsetTop && scrolledHeight <= limit) {
+                        elem.style.backgroundPositionY =  ( elem.offsetTop - scrolledHeight) /2.5+ "px";
+                    
+                    } else {
+                        elem.style.backgroundPositionY=  "0";
+                    }
+                });
+                
             </script>
     </body>
 

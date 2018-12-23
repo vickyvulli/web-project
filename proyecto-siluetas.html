@@ -8,6 +8,20 @@
         <link href="imgs/favicon.png" rel="shortcut icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="swiper/css/swiper.min.css">
+
+        <meta name="keywords" content="victoria, vullioud, diseñadora gráfica, proyecto, libro, album, ilustración, siluetas, adultos">
+        <meta name="author" content="Victoria Vullioud">
+        <meta name="description" content="Proyecto realizado durante la cursada en FADU, UBA.">
+
+        <meta name="robots" content="noindex, nofollow">
+
+        <meta property="og:title" content="Victoria Vullioud - Siluetas">
+        <meta property="og:description" content="Libro-Album ilustrado para adultos" />
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://vv-works.netlify.com/proyecto-siluetas.html">
+        <meta property="og:image" content="imgs/og-siluetas-07.png">
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="262" />
     </head>
 
     <body>
@@ -39,16 +53,17 @@
                 <section class="project-description">
                     <div class="project-description-left">
                         <ul class="project-descrip-list">
-                            <li class="project-list-category">CATEGORÍA</li>
+                            <li class="project-list-category">CATEGORÍA
                                 <ul>
                                     <li>Ilustración</li>
                                     <li>Editorial</li>
                                 </ul>
                             </li>
-                            <li class="project-list-category category-year">AÑO</li>
+                            <li class="project-list-category category-year">AÑO
                                 <ul>
                                     <li>2016</li>
                                 </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="project-description-right">
@@ -57,31 +72,40 @@
                         <p>El cuento pertenece a Eugenia Almeida, las ilustraciones y el armado editorial fueron realizados por mi.</p> 
                                 
                     </div>
+                
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="indication-swiper"><p>Deslizar </p><i class="fas fa-arrow-right arrow-swiper"></i></div>
+                                <img src="imgs/projects/proyecto-siluetas-01.jpg" alt="Pauta del proyecto">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/projects/proyecto-siluetas-02.jpg" alt="Colores del proyecto">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/projects/proyecto-siluetas-03.jpg" alt="Gráfica del proyecto">
+                            </div>
+                            
+                        </div>
+
+                    </div> <!-- .swiper container -->
+                    
                 </section> <!-- .project-description -->
-
-                <section class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="indication-swiper"><p>Deslizar </p><i class="fas fa-arrow-right arrow-swiper"></i></div>
-                            <img src="imgs/projects/proyecto-siluetas-01.jpg" alt="Pauta del proyecto">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="imgs/projects/proyecto-siluetas-02.jpg" alt="Colores del proyecto">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="imgs/projects/proyecto-siluetas-03.jpg" alt="Gráfica del proyecto">
-                        </div>
-                        
-                    </div>
-
-                </section> <!-- .swiper container -->
                 
                 <section class="project-content-container">
                     <div class="siluetas-content-01">
-                        
-                        <p>Las composiciones fueron realizadas a mano, recortando papeles para armar los collages y luego dibujandoles por encima los detalles.</p>
+                        <img src="imgs/projects/proyecto-siluetas-04.png" 
+                             alt="Tapa del libro"
+                             class="slideInUp"
+                             data-900-bottom="animation-play-state: paused;"
+                             data-bottom-top="animation-play-state: running;">
+                        <p  class="slideInUp"
+                            data-700-bottom="animation-play-state: paused;"
+                            data-bottom-top="animation-play-state: running;"
+                        >Las composiciones fueron realizadas a mano, recortando papeles para armar los collages y luego dibujandoles por encima los detalles.</p>
                     </div>
-                    <div class="siluetas-content-02">
+                    <div class="siluetas-content-02 parallaxSmall">
                         
                     </div>
                     <div class="siluetas-content-03">
@@ -173,13 +197,33 @@
                     // Optional parameters
                     direction: 'horizontal',
                     freeMode: 'true',
-                    slidesPerView: 1.05,
+                    slidesPerView: 'auto',
                     grabCursor: true
                       
                 });
                 mySwiper.on('touchMove', function () {
                     var arrow = document.querySelector('.indication-swiper');
                     arrow.classList.add("hideAnimated");
+                });
+            </script>
+            <script>
+                /*
+                EFECTO PARALLAX DE LAS PAGINAS
+                */
+
+                var elem= document.querySelector(".parallaxSmall");
+
+                window.addEventListener("scroll", function() {
+
+                    var scrolledHeight= window.pageYOffset,
+                        limit= elem.offsetTop + elem.offsetHeight;
+                                    
+                    if(scrolledHeight > elem.offsetTop && scrolledHeight <= limit) {
+                        elem.style.backgroundPositionY =  ( elem.offsetTop - scrolledHeight) /2.5+ "px";
+                    
+                    } else {
+                        elem.style.backgroundPositionY=  "0";
+                    }
                 });
             </script>
     </body>
