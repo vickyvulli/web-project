@@ -50,28 +50,30 @@
                         <p>Libro-Álbum realizado en la materia Ilustración, Cátedra Roldán, FADU, UBA.</p> 
                     </div>
                 </section> <!-- .index-hero -->
-                <section class="project-description">
-                    <div class="project-description-left">
-                        <ul class="project-descrip-list">
-                            <li class="project-list-category">CATEGORÍA
-                                <ul>
-                                    <li>Ilustración</li>
-                                    <li>Editorial</li>
-                                </ul>
-                            </li>
-                            <li class="project-list-category category-year">AÑO
-                                <ul>
-                                    <li>2016</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="project-description-right">
-                        <h4 class="project-list-category">ACERCA DEL PROYECTO</h4>
-                        <p>Siluetas es un libro-albúm realizado como proyecto final de la materia Ilustración. El trabajo consistió en realizar un libro ilustrado para adultos.</p>
-                        <p>El cuento pertenece a Eugenia Almeida, las ilustraciones y el armado editorial fueron realizados por mi.</p> 
-                                
-                    </div>
+                <section class="section-project-info">
+                    <div class="project-description">
+                        <div class="project-description-left">
+                            <ul class="project-descrip-list">
+                                <li class="project-list-category">CATEGORÍA
+                                    <ul>
+                                        <li>Ilustración</li>
+                                        <li>Editorial</li>
+                                    </ul>
+                                </li>
+                                <li class="project-list-category category-year">AÑO
+                                    <ul>
+                                        <li>2016</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="project-description-right">
+                            <h4 class="project-list-category">ACERCA DEL PROYECTO</h4>
+                            <p>Siluetas es un libro-albúm realizado como proyecto final de la materia Ilustración. El trabajo consistió en realizar un libro ilustrado para adultos.</p>
+                            <p>El cuento pertenece a Eugenia Almeida, las ilustraciones y el armado editorial fueron realizados por mi.</p> 
+                                    
+                        </div>
+                    </div> <!-- .project-description -->
                 
 
                     <div class="swiper-container">
@@ -90,8 +92,8 @@
                         </div>
 
                     </div> <!-- .swiper container -->
-                    
-                </section> <!-- .project-description -->
+
+                </section> <!-- .section-project-info -->
                 
                 <section class="project-content-container">
                     <div class="siluetas-content-01">
@@ -105,18 +107,22 @@
                             data-bottom-top="animation-play-state: running;"
                         >Las composiciones fueron realizadas a mano, recortando papeles para armar los collages y luego dibujandoles por encima los detalles.</p>
                     </div>
-                    <div class="siluetas-content-02 parallaxSmall">
-                        
+                    <div class="siluetas-content-02">
+                        <div data-center-top="background-position: 50% 1750%;"
+                             data-center="background-position: 50% 50%;"
+                             data--300-bottom="background-position: 50% -1550%;">
+                            <!-- background image pages -->
+                        </div>
                     </div>
                     <div class="siluetas-content-03">
                         <h4>DETALLES</h4>
                         <div class="siluetas-03-detalles">
-                            <img src="" alt="">
+                            <img src="imgs/projects/proyecto-siluetas-06.png" alt="Textura del trazo">
                             <p>Las texturas de los trazos son el resultado de dibujar sobre superficies con relieve</p>
                         </div>
                         <div class="siluetas-03-detalles">
-                            <img src="" alt="">
-                            <p>Las texturas de los trazos son el resultado de dibujar sobre superficies con relieve</p>
+                            <img src="imgs/projects/proyecto-siluetas-07.png" alt="Trabajo en capas">
+                            <p>Cada doble fue trabajada en capas, la base eran los papeles recortados y los detalles realizados sobre papel de calcar</p>
                         </div>
 
                     </div>
@@ -206,26 +212,7 @@
                     arrow.classList.add("hideAnimated");
                 });
             </script>
-            <script>
-                /*
-                EFECTO PARALLAX DE LAS PAGINAS
-                */
-
-                var elem= document.querySelector(".parallaxSmall");
-
-                window.addEventListener("scroll", function() {
-
-                    var scrolledHeight= window.pageYOffset,
-                        limit= elem.offsetTop + elem.offsetHeight;
-                                    
-                    if(scrolledHeight > elem.offsetTop && scrolledHeight <= limit) {
-                        elem.style.backgroundPositionY =  ( elem.offsetTop - scrolledHeight) /2.5+ "px";
-                    
-                    } else {
-                        elem.style.backgroundPositionY=  "0";
-                    }
-                });
-            </script>
+            
     </body>
 
 

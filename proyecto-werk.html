@@ -121,8 +121,12 @@
                             data-bottom-top="animation-play-state: running;"          
                              src="imgs/projects/proyecto-werk-05.jpg" alt="Cartelera">
                     </div>
-                    <div class="werk-content-03 parallaxSmall">
+                    <div class="werk-content-03">
                         <p>Desplegable institucional y programático /</p>
+                        <div data-center-top="background-position: 50% -800%;"
+                             data-center="background-position: 50% 50%;"
+                             data--200-bottom="background-position: 50% 600%;"> <!-- background image desplegable -->
+                        </div>
                         <!-- <img src="imgs/projects/proyecto-werk-06.png" alt="Desplegable frente y dorso"> -->
 
                     </div>
@@ -210,42 +214,7 @@
                     });
 
             </script>
-            <script>
-                /*
-                EFECTO PARALLAX DE LA CARTELERA
-                */
-                /*
-                var obj = document.querySelector('.parallax');
-    
-                function parallax() {
-                    var yPos = 0 - window.pageYOffset/6;	
-                    obj.style.top = 430 + yPos + "%";
-                }
-
-                window.addEventListener("scroll",parallax);
-
-                */
-
-                /*
-                EFECTO PARALLAX DEL DESPLEGABLE
-                */
-
-                var elem= document.querySelector(".parallaxSmall");
-
-                window.addEventListener("scroll", function() {
-
-                    var scrolledHeight= window.pageYOffset,
-                        limit= elem.offsetTop + elem.offsetHeight;
-                                    
-                    if(scrolledHeight > elem.offsetTop && scrolledHeight <= limit) {
-                        elem.style.backgroundPositionY =  ( elem.offsetTop - scrolledHeight) /2.5+ "px";
-                    
-                    } else {
-                        elem.style.backgroundPositionY=  "0";
-                    }
-                });
-                
-            </script>
+            
     </body>
 
 

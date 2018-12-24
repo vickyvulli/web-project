@@ -1325,21 +1325,27 @@ footer{
     height: 100vh;
     background-color: #fdf5bb;
     overflow: hidden;
+    position: relative;
+
+}
+.werk-content-03 div{
+    width: 100%;
+    height: 100%;
     background-image: url(imgs/projects/proyecto-werk-06.png);
     background-size: 80%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    padding-top: 5%;
-    position: relative;
-
 }
 
 .werk-content-03 p{
     display: inline-flex;
-    margin-left: 5%;
     width: 25%;
     font-size: 1.25em;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
 }
 
 .project-behance-link{
@@ -1423,13 +1429,17 @@ footer{
     height: 100vh;
     background-color: #374f6f;
     overflow: hidden;
-    background-image: url(imgs/projects/proyecto-siluetas);
-    background-size: 80%;
+    margin-bottom: 10%;
+
+}
+.siluetas-content-02 div{
+    width: 100%;
+    height: 100%;
+    background-image: url(imgs/projects/proyecto-siluetas-05.png);
+    background-size: 90%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
-    padding-top: 5%;
-    position: relative;
+    background-position: 50% 60%;
 
 }
 .siluetas-content-03{
@@ -1437,13 +1447,24 @@ footer{
     margin: 0 auto;
     justify-content: space-around;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8%;
+}
+.siluetas-content-03 h4{
+    margin-bottom: 8%;
+    width: 100%;
 }
 .siluetas-03-detalles{
     width: 40%;
 }
 .siluetas-03-detalles img{
     border-radius: 50%;
-    width: 100%;
+    width: 85%;
+    margin-bottom: 5%;
+}
+.siluetas-03-detalles p{
+    font-size: 1.25em;
 }
 
 
