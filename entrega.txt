@@ -1,0 +1,6 @@
+Sitio online en: https://vvworks.000webhostapp.com/index.html
+
+Pautas opcionales elegidas:
+1. Favicon en todas las páginas
+2. Animaciones en HTML5/Transiciones en CSS/Animaciones en CSS
+3. Formulario validado por JavaScript o HTML
