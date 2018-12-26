@@ -4,3 +4,5 @@ Pautas opcionales elegidas:
 1. Favicon en todas las páginas
 2. Animaciones en HTML5/Transiciones en CSS/Animaciones en CSS
 3. Formulario validado por JavaScript o HTML
+4. Formulario 100% accesible (no estoy 100% segura de cumplir con esta pauta)
+5. Etiquetas semánticas de HTML5 (no estoy 100% segura de cumplir con esta pauta)
