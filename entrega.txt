@@ -1,4 +1,4 @@
-Sitio online en: https://vvworks.000webhostapp.com/index.html
+Sitio online en: https://vvworks.000webhostapp.com/
 
 Pautas opcionales elegidas:
 1. Favicon en todas las páginas
